@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { 
   TrendingUp, 
   CheckCircle, 
@@ -13,7 +14,8 @@ import {
   Code,
   Database,
   BarChart3,
-  Calendar
+  Calendar,
+  FileText
 } from 'lucide-react';
 
 interface Config {
@@ -70,6 +72,13 @@ interface TechOpsRecurringTask {
   "Risk Seviyesi": string;
 }
 
+interface TechOpsLifecycleTask {
+  "Teknoloji İlgili Ekip": string;
+  "Lead Ort. ↓": number;
+  "Cycle Ort.": number;
+  "Reaction Ort.": number;
+}
+
 interface OutOfSprintItem {
   "Sprint": string;
   "Sprint Tarihi /Sprinte Eklenme Tarihi": string;
@@ -85,16 +94,18 @@ export default function Home() {
   const [infraDevOps, setInfraDevOps] = useState<InfraDevOps[]>([]);
   const [security, setSecurity] = useState<Security[]>([]);
   const [techOpsRecurringTasks, setTechOpsRecurringTasks] = useState<TechOpsRecurringTask[]>([]);
+  const [techOpsLifecycleTasks, setTechOpsLifecycleTasks] = useState<TechOpsLifecycleTask[]>([]);
   const [outOfSprintItems, setOutOfSprintItems] = useState<OutOfSprintItem[]>([]);
   const [selectedMonth, setSelectedMonth] = useState('2025-07');
   const [loading, setLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('overview');
+  const [selectedTeam, setSelectedTeam] = useState('all');
 
   useEffect(() => {
     const loadData = async () => {
       setLoading(true);
       try {
-        const [configRes, completedRes, ongoingRes, incidentsRes, infraRes, securityRes, techOpsRes, outOfSprintRes] = await Promise.all([
+        const [configRes, completedRes, ongoingRes, incidentsRes, infraRes, securityRes, techOpsRes, techOpsLifecycleRes, outOfSprintRes] = await Promise.all([
           fetch(`/api/data?month=${selectedMonth}&type=config`),
           fetch(`/api/data?month=${selectedMonth}&type=completed-projects`),
           fetch(`/api/data?month=${selectedMonth}&type=ongoing-projects`),
@@ -102,10 +113,11 @@ export default function Home() {
           fetch(`/api/data?month=${selectedMonth}&type=infra-devops`),
           fetch(`/api/data?month=${selectedMonth}&type=security`),
           fetch(`/api/data?month=${selectedMonth}&type=techops-recurring-tasks`),
+          fetch(`/api/data?month=${selectedMonth}&type=techops-lifecycle-tasks`),
           fetch(`/api/data?month=${selectedMonth}&type=out-of-sprint`)
         ]);
 
-        const [configData, completedData, ongoingData, incidentsData, infraData, securityData, techOpsData, outOfSprintData] = await Promise.all([
+        const [configData, completedData, ongoingData, incidentsData, infraData, securityData, techOpsData, techOpsLifecycleData, outOfSprintData] = await Promise.all([
           configRes.json(),
           completedRes.json(),
           ongoingRes.json(),
@@ -113,6 +125,7 @@ export default function Home() {
           infraRes.json(),
           securityRes.json(),
           techOpsRes.json(),
+          techOpsLifecycleRes.json(),
           outOfSprintRes.json()
         ]);
 
@@ -123,6 +136,7 @@ export default function Home() {
         setInfraDevOps(infraData);
         setSecurity(securityData);
         setTechOpsRecurringTasks(techOpsData);
+        setTechOpsLifecycleTasks(techOpsLifecycleData);
         setOutOfSprintItems(outOfSprintData);
       } catch (error) {
         console.error('Error loading data:', error);
@@ -221,6 +235,26 @@ export default function Home() {
       default:
         return 'bg-gray-100 text-gray-800';
     }
+  };
+
+  const getTeamColor = (teamName: string) => {
+    const teamColors: { [key: string]: string } = {
+      'payment': 'bg-purple-100 text-purple-800 border-purple-200',
+      'invoice': 'bg-indigo-100 text-indigo-800 border-indigo-200',
+      'customer ops': 'bg-blue-100 text-blue-800 border-blue-200',
+      'service banking': 'bg-cyan-100 text-cyan-800 border-cyan-200',
+      'subscription': 'bg-teal-100 text-teal-800 border-teal-200',
+      'finance': 'bg-emerald-100 text-emerald-800 border-emerald-200',
+      'internal ops': 'bg-orange-100 text-orange-800 border-orange-200',
+      'digital growth': 'bg-pink-100 text-pink-800 border-pink-200',
+      'project & agile transformation': 'bg-violet-100 text-violet-800 border-violet-200',
+      'ik onboarding': 'bg-rose-100 text-rose-800 border-rose-200',
+      'tech team': 'bg-slate-100 text-slate-800 border-slate-200',
+      'ai & data': 'bg-amber-100 text-amber-800 border-amber-200'
+    };
+    
+    const normalizedTeam = teamName.toLowerCase();
+    return teamColors[normalizedTeam] || 'bg-gray-100 text-gray-800 border-gray-200';
   };
 
   // Process out-of-sprint data to group by team and sprint
@@ -331,7 +365,6 @@ export default function Home() {
                 { id: 'security', label: 'Güvenlik', icon: Shield },
                 { id: 'techops', label: 'TechOps', icon: Database },
                 { id: 'sprint', label: 'Sprint Yönetimi', icon: Calendar },
-                { id: 'performance', label: 'Performans', icon: Activity }
               ].map((section) => {
                 const Icon = section.icon;
                 const isActive = activeSection === section.id;
@@ -452,11 +485,11 @@ export default function Home() {
                         <li className="flex items-center">
                           <Code className="h-4 w-4 text-blue-500 mr-2" />
                           {config.number_of_bug_fixes} bug fix işlemi tamamlandı
-                        </li>
+          </li>
                         <li className="flex items-center">
                           <AlertTriangle className="h-4 w-4 text-yellow-500 mr-2" />
                           {incidents.length} olay raporlandı ve çözüldü
-                        </li>
+          </li>
                       </ul>
                     </div>
                   </div>
@@ -470,54 +503,41 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   {completedProjects.length > 0 ? (
-                    <div className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {completedProjects.map((project, index) => (
-                        <div key={index} className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
-                          <div>
-                            <h4 className="font-medium text-gray-900">{project["Başlık "]}</h4>
-                            {project.Label && (
-                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                {project.Label}
-                              </span>
-                            )}
+                        <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 hover:scale-[1.02] transition-all duration-300 cursor-pointer group">
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-gray-900 text-lg mb-2 leading-tight">
+                                {project["Başlık "]}
+                              </h4>
+                            </div>
+                                                          <div className="ml-4">
+                                {project.Label && (
+                                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200 group-hover:bg-blue-200 group-hover:border-blue-300 transition-colors duration-300">
+                                    {project.Label.replace(/([a-zçğıöşü])([A-ZÇĞIİÖŞÜ])/g, '$1 $2')}
+                                  </span>
+                                )}
+                              </div>
                           </div>
-                          <CheckCircle className="h-6 w-6 text-green-600" />
+                         
                         </div>
                       ))}
                     </div>
                   ) : (
-                    <p className="text-gray-500 text-center py-4">Bu ay tamamlanan proje bulunmamaktadır.</p>
+                    <div className="text-center py-8">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <p className="text-gray-500 text-sm">Bu ay tamamlanan proje bulunmuyor</p>
+                    </div>
                   )}
                 </div>
               </div>
 
-              {/* Recent Incidents */}
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-                <div className="px-6 py-4 border-b border-gray-200">
-                  <h3 className="text-lg font-medium text-gray-900">Son Olaylar</h3>
-                </div>
-                <div className="p-6">
-                  {incidents.length > 0 ? (
-                    <div className="space-y-4">
-                      {incidents.slice(0, 3).map((incident, index) => (
-                        <div key={index} className="flex items-center justify-between p-4 bg-red-50 rounded-lg">
-                          <div className="flex-1">
-                            <h4 className="font-medium text-gray-900">{incident.Konu}</h4>
-                            <p className="text-sm text-gray-600">{incident.Takım} • {incident["Süre (.dk)"]} dakika</p>
-                          </div>
-                          <div className="text-right">
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                              {incident["Kök Sebep Kategorisi"]}
-                            </span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <p className="text-gray-500 text-center py-4">Bu ay kayıtlı olay bulunmamaktadır.</p>
-                  )}
-                </div>
-              </div>
+
             </section>
 
             {/* Projects Section */}
@@ -532,53 +552,102 @@ export default function Home() {
                   <h3 className="text-lg font-medium text-gray-900">Devam Eden Projeler</h3>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-6">
-                    {ongoingProjects.map((project, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-6">
-                        <div className="flex items-start justify-between">
+                  {/* Team Filter */}
+                  <div className="mb-6">
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Takım Filtresi:
+                    </label>
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        onClick={() => setSelectedTeam('all')}
+                        className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors duration-200 ${
+                          selectedTeam === 'all'
+                            ? 'bg-blue-100 text-blue-800 border-blue-300'
+                            : 'bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200'
+                        }`}
+                      >
+                        Tümü
+                      </button>
+                      {Array.from(new Set(ongoingProjects.map(p => p.Group).filter(Boolean))).map((team) => (
+                        <button
+                          key={team}
+                          onClick={() => setSelectedTeam(team || '')}
+                          className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors duration-200 ${
+                            selectedTeam === team
+                              ? `${getTeamColor(team || '').replace('group-hover:opacity-80', '')}`
+                              : 'bg-gray-100 text-gray-600 border-gray-200 hover:bg-gray-200'
+                          }`}
+                        >
+                          {team}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {ongoingProjects
+                      .filter(project => project["Başlık "] && project["Başlık "].trim() !== '')
+                      .filter(project => selectedTeam === 'all' || project.Group === selectedTeam)
+                      .map((project, index) => (
+                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 hover:scale-[1.02] transition-all duration-300 cursor-pointer group">
+                        <div className="flex flex-col h-full">
                           <div className="flex-1">
-                            <h4 className="font-medium text-gray-900 mb-2">{project["Başlık "]}</h4>
-                            {project["Güncellemesi"] && (
-                              <p className="text-sm text-gray-600 mb-3 whitespace-pre-line">{project["Güncellemesi"]}</p>
-                            )}
-                            <div className="flex items-center space-x-4">
+                            <div className="flex flex-wrap gap-2 mb-3">
                               {project.Group && (
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border transition-colors duration-300 group-hover:opacity-80 ${getTeamColor(project.Group)}`}>
                                   {project.Group}
                                 </span>
                               )}
                               {project.Tag && (
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                                  {project.Tag}
+                                <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border transition-colors duration-300 group-hover:opacity-80 ${getTeamColor(project.Tag)}`}>
+                                  {project.Tag.replace(/([a-zçğıöşü])([A-ZÇĞIİÖŞÜ])/g, '$1 $2')}
                                 </span>
                               )}
                             </div>
+                            <h4 className="font-semibold text-gray-900 text-lg mb-3 leading-tight">
+                              {project["Başlık "]}
+                            </h4>
+                            {project["Güncellemesi"] && (
+                              <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                                {project["Güncellemesi"]}
+                              </p>
+                            )}
                           </div>
-                          <div className="ml-6 text-right">
-                            {project.Statu && (
-                              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(project.Statu)}`}>
-                                {project.Statu}
-                              </span>
-                            )}
-                            {project.Progress && (
-                              <div className="mt-2">
-                                <div className="flex items-center justify-between text-sm text-gray-600 mb-1">
-                                  <span>İlerleme</span>
-                                  <span>{project.Progress}</span>
-                                </div>
-                                <div className="w-24 bg-gray-200 rounded-full h-2">
-                                  <div 
-                                    className={`h-2 rounded-full ${getProgressColor(project.Progress)}`}
-                                    style={{ width: project.Progress }}
-                                  ></div>
-                                </div>
-                              </div>
-                            )}
+                                                     <div className="mt-auto">
+                             <div className="flex items-center justify-between mb-3">
+                               {project.Statu && (
+                                 <span className="text-sm text-gray-600">
+                                   {project.Statu}
+                                 </span>
+                               )}
+                               {project.Progress && (
+                                 <span className="text-sm font-medium text-gray-700">
+                                   {project.Progress.replace(/^%/, '').replace(/(\d+)$/, '$1%')}
+                                 </span>
+                               )}
+                             </div>
+                                                         {project.Progress && (
+                               <div className="w-full bg-gray-200 rounded-full h-2">
+                                 <div 
+                                   className="h-2 rounded-full transition-all duration-300 bg-gray-400"
+                                   style={{ width: `${parseInt(project.Progress.replace(/[^\d]/g, ''))}%` }}
+                                 ></div>
+                               </div>
+                             )}
                           </div>
                         </div>
                       </div>
                     ))}
                   </div>
+                  {ongoingProjects.length === 0 && (
+                    <div className="text-center py-8">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <p className="text-gray-500 text-sm">Devam eden proje bulunmuyor</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </section>
@@ -587,49 +656,442 @@ export default function Home() {
             <section id="incidents" className="space-y-8">
               <div className="flex items-center space-x-3 mb-6">
                 <AlertTriangle className="h-6 w-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-900">Olaylar</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Olay Durumları</h2>
               </div>
-              
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+ 
+              {/* Summary Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0">
+                      <AlertTriangle className="h-8 w-8 text-gray-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-sm font-medium text-gray-600">Toplam Olay</p>
+                      <p className="text-2xl font-bold text-gray-900">{Array.isArray(incidents) ? incidents.length : 0}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0">
+                      <Clock className="h-8 w-8 text-gray-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-sm font-medium text-gray-600">Toplam Süre</p>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {Array.isArray(incidents) ? incidents.reduce((sum, incident) => sum + incident["Süre (.dk)"], 0) : 0} dk
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0">
+                      <Users className="h-8 w-8 text-gray-600" />
+                    </div>
+                    <div className="ml-4">
+                      <p className="text-sm font-medium text-gray-600">En Çok Etkilenen Takım</p>
+                                              <p className="text-lg font-bold text-gray-900">
+                          {(() => {
+                            if (!Array.isArray(incidents) || incidents.length === 0) {
+                              return 'Veri yok';
+                            }
+                            const teamCounts = incidents.reduce((acc, incident) => {
+                              acc[incident.Takım] = (acc[incident.Takım] || 0) + 1;
+                              return acc;
+                            }, {} as { [key: string]: number });
+                            
+                            return Object.entries(teamCounts).reduce((a, b) => 
+                              (teamCounts[a[0]] || 0) > (teamCounts[b[0]] || 0) ? a : b
+                            )[0];
+                          })()}
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                            {/* Incident Analysis */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
                 <div className="px-6 py-4 border-b border-gray-200">
-                  <h3 className="text-lg font-medium text-gray-900">Olay Raporları</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Olay Analizi</h3>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-6">
-                    {incidents.map((incident, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-6">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <h4 className="font-medium text-gray-900 mb-2">{incident.Konu}</h4>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
-                              <div>
-                                <span className="font-medium">Takım:</span> {incident.Takım}
-                              </div>
-                              <div>
-                                <span className="font-medium">Süre:</span> {incident["Süre (.dk)"]} dakika
-                              </div>
-                              <div>
-                                <span className="font-medium">Kategori:</span> {incident["Kök Sebep Kategorisi"]}
-                              </div>
-                            </div>
-                            <div className="mt-3 text-sm text-gray-600">
-                              <div><span className="font-medium">Başlangıç:</span> {incident.Başlangıç}</div>
-                              <div><span className="font-medium">Bitiş:</span> {incident.Bitiş}</div>
-                            </div>
-                          </div>
-                          <div className="ml-6">
-                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                              incident["Kök Sebep Kategorisi"] === 'Bug' ? 'bg-red-100 text-red-800' :
-                              incident["Kök Sebep Kategorisi"] === 'Deploy' ? 'bg-yellow-100 text-yellow-800' :
-                              'bg-gray-100 text-gray-800'
-                            }`}>
-                              {incident["Kök Sebep Kategorisi"]}
-                            </span>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Root Cause Analysis - Donut Chart */}
+                    <div>
+                      <h4 className="text-md font-medium text-gray-900 mb-4">Kök Sebep Analizi</h4>
+                      <div className="flex items-center justify-center">
+                        <div className="relative w-64 h-64">
+                          {/* Donut Chart */}
+                          <svg className="w-64 h-64" viewBox="0 0 100 100">
+                            {(() => {
+                              if (!Array.isArray(incidents) || incidents.length === 0) {
+                                return null;
+                              }
+                              const rootCauseCounts = incidents.reduce((acc, incident) => {
+                                acc[incident["Kök Sebep Kategorisi"]] = (acc[incident["Kök Sebep Kategorisi"]] || 0) + 1;
+                                return acc;
+                              }, {} as { [key: string]: number });
+                              
+                              const entries = Object.entries(rootCauseCounts);
+                              const total = Object.values(rootCauseCounts).reduce((sum, val) => sum + val, 0);
+                              
+                              let currentAngle = -90; // Start from top
+                              
+                              return entries.map(([category, count], index) => {
+                                const percentage = (count / total) * 100;
+                                const angle = (percentage / 100) * 360;
+                                
+                                const colors = {
+                                  'Bug': '#ef4444',
+                                  'Deploy': '#f59e0b',
+                                  'Thirdparty': '#8b5cf6'
+                                };
+                                
+                                // Calculate arc path
+                                const radius = 35;
+                                const innerRadius = 20;
+                                const centerX = 50;
+                                const centerY = 50;
+                                
+                                const startAngleRad = (currentAngle * Math.PI) / 180;
+                                const endAngleRad = ((currentAngle + angle) * Math.PI) / 180;
+                                
+                                const x1 = centerX + radius * Math.cos(startAngleRad);
+                                const y1 = centerY + radius * Math.sin(startAngleRad);
+                                const x2 = centerX + radius * Math.cos(endAngleRad);
+                                const y2 = centerY + radius * Math.sin(endAngleRad);
+                                
+                                const innerX1 = centerX + innerRadius * Math.cos(startAngleRad);
+                                const innerY1 = centerY + innerRadius * Math.sin(startAngleRad);
+                                const innerX2 = centerX + innerRadius * Math.cos(endAngleRad);
+                                const innerY2 = centerY + innerRadius * Math.sin(endAngleRad);
+                                
+                                const largeArcFlag = angle > 180 ? 1 : 0;
+                                
+                                const outerArc = `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`;
+                                const innerArc = `A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${innerX1} ${innerY1}`;
+                                
+                                const pathData = `M ${x1} ${y1} ${outerArc} L ${innerX2} ${innerY2} ${innerArc} Z`;
+                                
+                                currentAngle += angle;
+                                
+                                return (
+                                  <path
+                                    key={category}
+                                    d={pathData}
+                                    fill={colors[category as keyof typeof colors] || '#6b7280'}
+                                    stroke="white"
+                                    strokeWidth="0.5"
+                                  />
+                                );
+                              });
+                            })()}
+                          </svg>
+                          
+                          {/* Legend */}
+                          <div className="absolute left-full ml-8 top-1/2 transform -translate-y-1/2 space-y-2">
+                            {(() => {
+                              if (!Array.isArray(incidents) || incidents.length === 0) {
+                                return null;
+                              }
+                              const rootCauseCounts = incidents.reduce((acc, incident) => {
+                                acc[incident["Kök Sebep Kategorisi"]] = (acc[incident["Kök Sebep Kategorisi"]] || 0) + 1;
+                                return acc;
+                              }, {} as { [key: string]: number });
+                              
+                              return Object.entries(rootCauseCounts).map(([category, count]) => (
+                                <div key={category} className="flex items-center space-x-2">
+                                  <div 
+                                    className="w-3 h-3 rounded-full"
+                                    style={{
+                                      backgroundColor: category === 'Bug' ? '#ef4444' : 
+                                                       category === 'Deploy' ? '#f59e0b' : 
+                                                       category === 'Thirdparty' ? '#8b5cf6' : '#6b7280'
+                                    }}
+                                  ></div>
+                                  <span className="text-sm text-gray-600">{category}</span>
+                                </div>
+                              ));
+                            })()}
                           </div>
                         </div>
                       </div>
-                    ))}
+                    </div>
+
+                    {/* Monthly Event Distribution - Bar Chart */}
+                    <div>
+                      <h4 className="text-md font-medium text-gray-900 mb-4">Aylık Olay Dağılımı</h4>
+                      <div className="flex items-center justify-center">
+                        <div className="relative w-full h-64">
+                          {/* Bar Chart */}
+                          <svg className="w-full h-64" viewBox="0 0 400 200">
+                            {/* Grid lines */}
+                            {(() => {
+                              if (!Array.isArray(incidents) || incidents.length === 0) {
+                                return null;
+                              }
+                              // Calculate max count for dynamic grid
+                              const monthlyCounts = incidents.reduce((acc, incident) => {
+                                const date = new Date(incident.Başlangıç);
+                                const month = date.getMonth();
+                                const monthNames = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+                                const monthName = monthNames[month];
+                                
+                                if (!acc[monthName]) {
+                                  acc[monthName] = 0;
+                                }
+                                acc[monthName]++;
+                                return acc;
+                              }, {} as { [key: string]: number });
+                              
+                              const maxCount = Math.max(...Object.values(monthlyCounts), 1);
+                              const gridSteps = Math.min(maxCount, 8); // Max 8 grid lines
+                              const stepSize = Math.ceil(maxCount / gridSteps);
+                              
+                              return Array.from({ length: gridSteps + 1 }, (_, i) => {
+                                const tick = i * stepSize;
+                                return (
+                                  <g key={tick}>
+                                    <line
+                                      x1="50"
+                                      y1={200 - (tick * (160 / maxCount))}
+                                      x2="350"
+                                      y2={200 - (tick * (160 / maxCount))}
+                                      stroke="#e5e7eb"
+                                      strokeWidth="1"
+                                    />
+                                    <text
+                                      x="40"
+                                      y={200 - (tick * (160 / maxCount)) + 4}
+                                      textAnchor="end"
+                                      fontSize="10"
+                                      fill="#6b7280"
+                                    >
+                                      {tick}
+                                    </text>
+                                  </g>
+                                );
+                              });
+                            })()}
+                            
+                            {/* Y-axis label */}
+                            <text
+                              x="20"
+                              y="100"
+                              textAnchor="middle"
+                              fontSize="12"
+                              fill="#374151"
+                              transform="rotate(-90, 20, 100)"
+                            >
+                              Olay Sayısı
+                            </text>
+                            
+                            {/* X-axis */}
+                            <line
+                              x1="50"
+                              y1="200"
+                              x2="350"
+                              y2="200"
+                              stroke="#374151"
+                              strokeWidth="2"
+                            />
+                            
+                            {/* X-axis label */}
+                            <text
+                              x="200"
+                              y="220"
+                              textAnchor="middle"
+                              fontSize="12"
+                              fill="#374151"
+                            >
+                              Aylar
+                            </text>
+                            
+                            {/* Bars */}
+                            {(() => {
+                              if (!Array.isArray(incidents) || incidents.length === 0) {
+                                return null;
+                              }
+                              // Get monthly counts from actual data
+                              const monthlyCounts = incidents.reduce((acc, incident) => {
+                                const date = new Date(incident.Başlangıç);
+                                const month = date.getMonth(); // 0-11
+                                const monthNames = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+                                const monthName = monthNames[month];
+                                
+                                if (!acc[monthName]) {
+                                  acc[monthName] = 0;
+                                }
+                                acc[monthName]++;
+                                return acc;
+                              }, {} as { [key: string]: number });
+                              
+                              // Get the last 6 months with data
+                              const monthNames = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+                              const currentMonth = new Date().getMonth();
+                              const last6Months = [];
+                              
+                              for (let i = 5; i >= 0; i--) {
+                                const monthIndex = (currentMonth - i + 12) % 12;
+                                const monthName = monthNames[monthIndex];
+                                last6Months.push({
+                                  month: monthName,
+                                  count: monthlyCounts[monthName] || 0
+                                });
+                              }
+                              
+                              const maxCount = Math.max(...last6Months.map(m => m.count), 1); // At least 1 to avoid division by zero
+                              const barWidth = 40;
+                              const barSpacing = 10;
+                              const startX = 70;
+                              
+                              return last6Months.map((data, index) => {
+                                const x = startX + (index * (barWidth + barSpacing));
+                                const height = (data.count / maxCount) * 160; // Max height is 160
+                                const y = 200 - height;
+                                
+                                return (
+                                  <g key={data.month}>
+                                    <rect
+                                      x={x}
+                                      y={y}
+                                      width={barWidth}
+                                      height={height}
+                                      fill="#60a5fa"
+                                      rx="2"
+                                    />
+                                    <text
+                                      x={x + barWidth / 2}
+                                      y="215"
+                                      textAnchor="middle"
+                                      fontSize="10"
+                                      fill="#374151"
+                                    >
+                                      {data.month}
+                                    </text>
+                                    <text
+                                      x={x + barWidth / 2}
+                                      y={y - 5}
+                                      textAnchor="middle"
+                                      fontSize="10"
+                                      fill="#374151"
+                                      fontWeight="bold"
+                                    >
+                                      {data.count}
+                                    </text>
+                                  </g>
+                                );
+                              });
+                            })()}
+                          </svg>
+                          
+                          {/* Legend */}
+                          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
+                            <div className="w-4 h-3 bg-blue-400 rounded"></div>
+                            <span className="text-sm text-gray-600">Olay Sayısı</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Detailed Events Table */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+                <div className="px-6 py-4 border-b border-gray-200">
+                  <h3 className="text-lg font-medium text-gray-900">Olay Detayları</h3>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Takım
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Konu
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Kök Sebep
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Başlangıç
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Bitiş
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Süre (dk)
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Rapor
+                        </th>
+                      </tr>
+                    </thead>
+                                          <tbody className="bg-white divide-y divide-gray-200">
+                        {Array.isArray(incidents) && incidents.length > 0 ? (
+                          incidents.map((incident, index) => (
+                        <tr key={index} className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getTeamColor(incident.Takım)}`}>
+                              {incident.Takım}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4 text-sm text-gray-900 max-w-xs">
+                            <div className="truncate" title={incident.Konu}>
+                              {incident.Konu}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${
+                              incident["Kök Sebep Kategorisi"] === 'Bug' ? 'bg-red-100 text-red-800 border-red-200' :
+                              incident["Kök Sebep Kategorisi"] === 'Deploy' ? 'bg-yellow-100 text-yellow-800 border-yellow-200' :
+                              incident["Kök Sebep Kategorisi"] === 'Thirdparty' ? 'bg-purple-100 text-purple-800 border-purple-200' :
+                              'bg-gray-100 text-gray-800 border-gray-200'
+                            }`}>
+                              {incident["Kök Sebep Kategorisi"]}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {new Date(incident.Başlangıç).toLocaleString('tr-TR')}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {new Date(incident.Bitiş).toLocaleString('tr-TR')}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {incident["Süre (.dk)"]}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                            <a
+                              href={incident.Rapor}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center px-3 py-1 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                            >
+                              <FileText className="h-3 w-3 mr-1" />
+                              Gör
+                            </a>
+                          </td>
+                        </tr>
+                          ))
+                        ) : (
+                          <tr>
+                            <td colSpan={7} className="px-6 py-8 text-center text-sm text-gray-500">
+                              <div className="flex flex-col items-center">
+                                <AlertTriangle className="w-8 h-8 text-gray-400 mb-2" />
+                                <span>Olay bulunmuyor</span>
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+                      </tbody>
+                  </table>
                 </div>
               </div>
             </section>
@@ -646,32 +1108,39 @@ export default function Home() {
                   <h3 className="text-lg font-medium text-gray-900">Altyapı ve DevOps Projeleri</h3>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {infraDevOps.map((project, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-6">
-                        <div className="flex items-start justify-between">
+                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 hover:scale-[1.02] transition-all duration-300 cursor-pointer group">
+                        <div className="flex flex-col h-full">
                           <div className="flex-1">
-                            <h4 className="font-medium text-gray-900 mb-2">{project["Başlık "]}</h4>
-                            <p className="text-sm text-gray-600 mb-3 whitespace-pre-line">{project["Güncellemesi"]}</p>
-                          </div>
-                          <div className="ml-6 text-right">
-                            {project.Statü && (
-                              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(project.Statü)}`}>
-                                {project.Statü}
-                              </span>
+                            <h4 className="font-semibold text-gray-900 text-lg mb-3 leading-tight">
+                              {project["Başlık "]}
+                            </h4>
+                            {project["Güncellemesi"] && (
+                              <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                                {project["Güncellemesi"]}
+                              </p>
                             )}
+                          </div>
+                          <div className="mt-auto">
+                            <div className="flex items-center justify-between mb-3">
+                              {project.Statü && (
+                                <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border transition-colors duration-300 group-hover:opacity-80 ${getStatusColor(project.Statü)}`}>
+                                  {project.Statü}
+                                </span>
+                              )}
+                              {project["İlerleme Durumu"] && (
+                                <span className="text-sm font-medium text-gray-700">
+                                  {project["İlerleme Durumu"].replace(/^%/, '').replace(/(\d+)$/, '$1%')}
+                                </span>
+                              )}
+                            </div>
                             {project["İlerleme Durumu"] && (
-                              <div className="mt-2">
-                                <div className="flex items-center justify-between text-sm text-gray-600 mb-1">
-                                  <span>İlerleme</span>
-                                  <span>{project["İlerleme Durumu"]}</span>
-                                </div>
-                                <div className="w-24 bg-gray-200 rounded-full h-2">
-                                  <div 
-                                    className={`h-2 rounded-full ${getProgressColor(project["İlerleme Durumu"])}`}
-                                    style={{ width: project["İlerleme Durumu"] }}
-                                  ></div>
-                                </div>
+                              <div className="w-full bg-gray-200 rounded-full h-2">
+                                <div 
+                                  className="h-2 rounded-full transition-all duration-300 bg-gray-400"
+                                  style={{ width: `${parseInt(project["İlerleme Durumu"].replace(/[^\d]/g, ''))}%` }}
+                                ></div>
                               </div>
                             )}
                           </div>
@@ -679,6 +1148,14 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
+                  {infraDevOps.length === 0 && (
+                    <div className="text-center py-8">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <Server className="w-8 h-8 text-gray-400" />
+                      </div>
+                      <p className="text-gray-500 text-sm">Altyapı projesi bulunmuyor</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </section>
@@ -695,32 +1172,39 @@ export default function Home() {
                   <h3 className="text-lg font-medium text-gray-900">Güvenlik Projeleri</h3>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {security.map((project, index) => (
-                      <div key={index} className="border border-gray-200 rounded-lg p-6">
-                        <div className="flex items-start justify-between">
+                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-blue-300 hover:scale-[1.02] transition-all duration-300 cursor-pointer group">
+                        <div className="flex flex-col h-full">
                           <div className="flex-1">
-                            <h4 className="font-medium text-gray-900 mb-2">{project["Başlık"]}</h4>
-                            <p className="text-sm text-gray-600 mb-3 whitespace-pre-line">{project["Güncellemesi"]}</p>
-                          </div>
-                          <div className="ml-6 text-right">
-                            {project.Statu && (
-                              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(project.Statu)}`}>
-                                {project.Statu}
-                              </span>
+                            <h4 className="font-semibold text-gray-900 text-lg mb-3 leading-tight">
+                              {project["Başlık"]}
+                            </h4>
+                            {project["Güncellemesi"] && (
+                              <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                                {project["Güncellemesi"]}
+                              </p>
                             )}
+                          </div>
+                          <div className="mt-auto">
+                            <div className="flex items-center justify-between mb-3">
+                              {project.Statu && (
+                                <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border transition-colors duration-300 group-hover:opacity-80 ${getStatusColor(project.Statu)}`}>
+                                  {project.Statu}
+                                </span>
+                              )}
+                              {project.Progress && (
+                                <span className="text-sm font-medium text-gray-700">
+                                  {project.Progress.replace(/^%/, '').replace(/(\d+)$/, '$1%')}
+                                </span>
+                              )}
+                            </div>
                             {project.Progress && (
-                              <div className="mt-2">
-                                <div className="flex items-center justify-between text-sm text-gray-600 mb-1">
-                                  <span>İlerleme</span>
-                                  <span>{project.Progress}</span>
-                                </div>
-                                <div className="w-24 bg-gray-200 rounded-full h-2">
-                                  <div 
-                                    className={`h-2 rounded-full ${getProgressColor(project.Progress)}`}
-                                    style={{ width: project.Progress }}
-                                  ></div>
-                                </div>
+                              <div className="w-full bg-gray-200 rounded-full h-2">
+                                <div 
+                                  className="h-2 rounded-full transition-all duration-300 bg-gray-400"
+                                  style={{ width: `${parseInt(project.Progress.replace(/[^\d]/g, ''))}%` }}
+                                ></div>
                               </div>
                             )}
                           </div>
@@ -728,6 +1212,14 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
+                  {security.length === 0 && (
+                    <div className="text-center py-8">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+                        <Shield className="w-8 h-8 text-gray-400" />
+                      </div>
+                      <p className="text-gray-500 text-sm">Güvenlik projesi bulunmuyor</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </section>
@@ -739,7 +1231,7 @@ export default function Home() {
                 <h2 className="text-2xl font-bold text-gray-900">TechOps</h2>
               </div>
               
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
                 <div className="px-6 py-4 border-b border-gray-200">
                   <h3 className="text-lg font-medium text-gray-900">Tekrarlayan Görevler ve Risk Analizi</h3>
                 </div>
@@ -792,6 +1284,64 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* Lifecycle Tasks Table */}
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+                <div className="px-6 py-4 border-b border-gray-200">
+                  <h3 className="text-lg font-medium text-gray-900">Yaşam Döngüsü Görevleri</h3>
+                </div>
+                <div className="p-6">
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full divide-y divide-gray-200">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Teknoloji İlgili Ekip
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Lead Ort. (gün)
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Cycle Ort. (gün)
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Reaction Ort. (gün)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        {Array.isArray(techOpsLifecycleTasks) && techOpsLifecycleTasks.length > 0 ? (
+                          techOpsLifecycleTasks.map((task, index) => (
+                            <tr key={index} className="hover:bg-gray-50">
+                              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                {task["Teknoloji İlgili Ekip"]}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                {task["Lead Ort. ↓"].toFixed(2)}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                {task["Cycle Ort."].toFixed(2)}
+                              </td>
+                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                {task["Reaction Ort."].toFixed(2)}
+                              </td>
+                            </tr>
+                          ))
+                        ) : (
+                          <tr>
+                            <td colSpan={4} className="px-6 py-8 text-center text-sm text-gray-500">
+                              <div className="flex flex-col items-center">
+                                <Database className="w-8 h-8 text-gray-400 mb-2" />
+                                <span>Yaşam döngüsü görevi bulunmuyor</span>
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </section>
 
             {/* Sprint Management Section */}
@@ -803,156 +1353,40 @@ export default function Home() {
               
               <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                 <div className="px-6 py-4 border-b border-gray-200">
-                  <h3 className="text-lg font-medium text-gray-900">Sprint Dışı Maddeler Analizi</h3>
+                  <h3 className="text-lg font-medium text-gray-900">Sprint Dışı Maddeler</h3>
                 </div>
                 <div className="p-6">
-                  <div className="space-y-6">
-                    {Object.entries(processOutOfSprintData()).map(([team, sprintData]) => (
-                      <div key={team} className="border border-gray-200 rounded-lg p-6">
-                        <h4 className="font-medium text-gray-900 mb-4">{team}</h4>
-                        <div className="overflow-x-auto">
-                          <table className="min-w-full divide-y divide-gray-200">
-                            <thead className="bg-gray-50">
-                              <tr>
-                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                  Sprint
-                                </th>
-                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                  Sprint Dışı Madde Sayısı
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody className="bg-white divide-y divide-gray-200">
-                              {Object.entries(sprintData).map(([sprint, count]) => (
-                                <tr key={sprint} className="hover:bg-gray-50">
-                                  <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                    {sprint}
-                                  </td>
-                                  <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                      count > 10 ? 'bg-red-100 text-red-800' :
-                                      count > 5 ? 'bg-yellow-100 text-yellow-800' :
-                                      'bg-green-100 text-green-800'
-                                    }`}>
-                                      {count}
-                                    </span>
-                                  </td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Detailed Out-of-Sprint Items */}
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-                <div className="px-6 py-4 border-b border-gray-200">
-                  <h3 className="text-lg font-medium text-gray-900">Detaylı Sprint Dışı Maddeler</h3>
-                </div>
-                <div className="p-6">
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full divide-y divide-gray-200">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Takım
-                          </th>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Sprint
-                          </th>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Tarih
-                          </th>
-                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Madde
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="bg-white divide-y divide-gray-200">
-                        {outOfSprintItems
-                          .filter(item => typeof item["Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı"] === 'string')
-                          .map((item, index) => (
-                          <tr key={index} className="hover:bg-gray-50">
-                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                              {item.Takım || '-'}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              {item.Sprint || '-'}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              {item["Sprint Tarihi /Sprinte Eklenme Tarihi"]}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                              <span className="font-mono text-blue-600">
-                                {item["Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı"]}
-                              </span>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {Object.entries(processOutOfSprintData())
+                      .map(([team, sprintData]) => {
+                        const totalCount = Object.values(sprintData).reduce((sum, count) => sum + count, 0);
+                        return { team, totalCount };
+                      })
+                      .sort((a, b) => b.totalCount - a.totalCount)
+                      .map(({ team, totalCount }) => {
+                        const getCountColor = (count: number) => {
+                        if (count >= 40) return 'bg-red-500';
+                        if (count >= 20) return 'bg-orange-500';
+                        if (count >= 10) return 'bg-yellow-500';
+                        return 'bg-blue-500';
+                      };
+                        
+                        return (
+                          <div key={team} className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                            <div className="text-center">
+                              <div className={`w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3 ${getCountColor(totalCount)}`}>
+                                <span className="text-white font-bold text-xl">{totalCount}</span>
+                              </div>
+                              <h4 className="text-md font-semibold text-gray-900 mb-1">{team}</h4>
+                            </div>
+                          </div>
+                        );
+                      })}
                   </div>
                 </div>
               </div>
             </section>
-
-            {/* Performance Section */}
-            <section id="performance" className="space-y-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <Activity className="h-6 w-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-900">Performans</h2>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Performance Metrics */}
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Performans Metrikleri</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">Uptime</span>
-                      <span className="font-semibold text-green-600">{config.uptime_percentage}%</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">Bug Fix Sayısı</span>
-                      <span className="font-semibold text-blue-600">{config.number_of_bug_fixes}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">Deploy Sayısı</span>
-                      <span className="font-semibold text-purple-600">{config.number_of_deployments}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Project Status Distribution */}
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Proje Durumu Dağılımı</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">Tamamlanan</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-16 bg-gray-200 rounded-full h-2">
-                          <div className="bg-green-500 h-2 rounded-full" style={{ width: `${(config.number_of_completed_projects / (config.number_of_completed_projects + config.number_of_ongoing_projects)) * 100}%` }}></div>
-                        </div>
-                        <span className="font-semibold text-green-600">{config.number_of_completed_projects}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">Devam Eden</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-16 bg-gray-200 rounded-full h-2">
-                          <div className="bg-blue-500 h-2 rounded-full" style={{ width: `${(config.number_of_ongoing_projects / (config.number_of_completed_projects + config.number_of_ongoing_projects)) * 100}%` }}></div>
-                        </div>
-                        <span className="font-semibold text-blue-600">{config.number_of_ongoing_projects}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <div className="h-60" />            
           </div>
         </main>
         </div>

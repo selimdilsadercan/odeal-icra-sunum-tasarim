@@ -56,6 +56,11 @@ export async function GET(request: NextRequest) {
       if (fs.existsSync(filePath)) {
         data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
       }
+    } else if (type === 'techops-lifecycle-tasks') {
+      const filePath = path.join(dataDir, 'techops-lifecycle-tasks.json');
+      if (fs.existsSync(filePath)) {
+        data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      }
     } else if (type === 'out-of-sprint') {
       const filePath = path.join(dataDir, 'out-of-sprint.json');
       if (fs.existsSync(filePath)) {
