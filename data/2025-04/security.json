@@ -1,0 +1,30 @@
+[
+  {
+    "Başlık ": "Microsoft Güvenlik Çözümleri Testleri",
+    "Güncellemesi": "Microsoft geçişi ile hayata geçirilecek güvenlik teknolojilerinin testleri gerçekleştirildi."
+  },
+  {
+    "Başlık ": "Merkez Bankası Denetim Hazırlıkları",
+    "Güncellemesi": "Dördüncü çeyrekte başlayacak denetim öncesi, tebliğin bilgi güvenliğine adreslenen maddeleri kontrol edilerek eksiklerin belirlenip giderilmesi çalışmasına başlandı."
+  },
+  {
+    "Başlık ": "Microsoft Geçişi ve Güvenlik Çözümleri ",
+    "Güncellemesi": "Microsoft geçişi ile hayata geçirilecek kritik güvenlik teknolojilerinin testleri gerçekleştirildi."
+  },
+  {
+    "Başlık ": "Merkez Bankası Denetim Hazırlıkları ",
+    "Güncellemesi": "Dördüncü çeyrekte başlayacak denetim öncesi, tebliğin bilgi güvenliğine adreslenen maddeleri kontrol edilerek eksiklerin belirlenip giderilmesi çalışmasına başlandı."
+  },
+  {
+    "Başlık ": "Ağ Segmentasyonu ",
+    "Güncellemesi": "Şirket ağının, güvenlik kontrollerinin sıkılaştırıldığı VLAN’lara bölünmesi için planlama yapılarak gerekli tanımlar yapıldı. İç uygulamalarımızın yeni yapıya taşınmasına başlandı."
+  },
+  {
+    "Başlık ": "3rd Party Erişimlerin Düzenlenmesi ",
+    "Güncellemesi": "3rd party erişimlerindeki yapısal zafiyetler ve teknoloji eksiklikleri değerlendirildi. Erişimlerin kontrol altına alınması için FW, erişim yönetimi ve loglama ürünlerinden oluşan bir yapı tasarlanarak testlerine başlandı."
+  },
+  {
+    "Başlık ": "Loglama Konusundaki Eksikliklerin Giderilmesi ",
+    "Güncellemesi": "Hem regülasyonel hem de siber güvenlik konusunda loglama eksiklikleri belirlendi. Open source teknolojiye geçilerek, eksiklerin giderilmesi için çalışmaya başlandı"
+  }
+]

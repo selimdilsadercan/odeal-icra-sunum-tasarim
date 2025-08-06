@@ -1,0 +1,194 @@
+[
+  {
+    "Başlık ": "Yeni Ürün Kapsamında Önyüz Çalışmalarının Yapılması",
+    "Güncellemesi": "Mevcut sprintte aşağıdaki UI tasarımları yapılmaktadır:\nKart Ürünleri - Güncelle butonu\nKart Ürünleri - Kart hareketleri butonu\nSanal Ürünler - Detay butonu\n\nYukarıdaki önyüz çalışmalarının da bitmesiyle birlikte ön yüz ile arka yüz geliştirmelerinin bağlanması için aşağıdaki geliştirmelere başlanacaktır:\nKart ürünleri Güncelle ve Kart bilgileri butonu entegrasyon \nSanal ürünler Detay butonu entegrasyonu",
+    "Progress": "30%",
+    "Statu": "In Progress",
+    "Group": "Subscription",
+    "Tag": "YeniÜrünYapısı"
+  },
+  {
+    "Başlık ": "D2D/A2A Otopark bilgi fişinin eklenmesi",
+    "Güncellemesi": "Son yorum geçerlidir. Analize devam edilmektedir. ",
+    "Progress": "10%",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "A2A;D2D"
+  },
+  {
+    "Başlık ": "Ekran Üzerinden Plan Çoklama ile Yeni Plan Oluşturma Özelliğinin Eklenmesi",
+    "Güncellemesi": "Mevcut sprintte çoklanan planların taslak ekranına düşürülmesi, ekranda bulunan ilgili statüdeki planların onaylanması ve onay maili gönderilmesi geliştirmeleri ele alınacaktır.",
+    "Progress": "45%",
+    "Statu": "In Progress",
+    "Group": "Subscription",
+    "Tag": "Plan"
+  },
+  {
+    "Başlık ": "WorldLine A910SF OKC Projesi",
+    "Güncellemesi": "Halkbank haricindeki bankalarda sorun devam ediyor. Banka kurulum ekibinden bilgi beklenmektedir.",
+    "Progress": "90%",
+    "Statu": "Test",
+    "Group": "Payment",
+    "Tag": "Ingenico"
+  },
+  {
+    "Başlık ": "D2D & A2A profiline internal basket profili eklenmesi",
+    "Güncellemesi": "Testler sırasında alınan hata Momentup'a iletilmişti, henüz dönüş bekleniyor.",
+    "Progress": "70%",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "A2A;D2D"
+  },
+  {
+    "Başlık ": "Digital Onboarding Faz1 İyileştirme süreci",
+    "Güncellemesi": "İyileştirmeler devam etmektedir.\nTCO-547: FE - Enqura sonuçlarına göre başvurular ekranı ve sözleşme akışının güncellenmesi\nBLOCKED\nTamamlandığında KYC süreçlerini tamamlayamayan müşterileri yüz yüze doğrulama yapacak sistem geliştirilmiş olacaktır. \nBu geliştirmenin calıya çıkması için operasyonel test ve onay beklenmektedir. ",
+    "Progress": "50%",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "DigitalOnboarding"
+  },
+  {
+    "Başlık ": "Ingenico cihazlarında Ödeal TR Karekod Açılması",
+    "Güncellemesi": "Type ve Payment type alanında sorun vardı. Toplantı sonrası mail ile ilgili alanlar verildi. Kontrol edilip düzeltilmesi beklenmektedir.",
+    "Progress": "95%",
+    "Statu": "Test",
+    "Group": "Payment",
+    "Tag": "Ingenico"
+  },
+  {
+    "Başlık ": "Cihaz versiyonlarının İçeri Doğru Formatta Alınması",
+    "Güncellemesi": "Manager testlerinde kontroller devam etmektedir.",
+    "Progress": "95%",
+    "Statu": "Blocked",
+    "Group": "Payment",
+    "Tag": "Tekilleştirme"
+  },
+  {
+    "Başlık ": "EDM Özel Entegratör Entegrasyonu",
+    "Güncellemesi": "HR testleri tamamlandı. FaturaHub üzerinden fatura gönder al testlerine başlandı.",
+    "Progress": "70%",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "EDM"
+  },
+  {
+    "Başlık ": "Cari hesap, avans ve yemek kartı ödeme yöntemlerinin eklenmesi",
+    "Güncellemesi": "Son olarak bug tespit edilip momentupa iletilmişti, düzeltme sağlandı. Ödeal Backend geliştirmesi devam ediyor.",
+    "Progress": "85%",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "ÖdemeYöntemleri"
+  },
+  {
+    "Başlık ": "Akbank fiziki pos banka kurulumlarının api üzerinden yapılması",
+    "Güncellemesi": "Bankadan dönüş yapılmadı.",
+    "Progress": "80%",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "FizikiPOS"
+  },
+  {
+    "Başlık ": "Self Onboarding",
+    "Güncellemesi": "İş ekiplerinin canlıya geçiş öncesi yeni revize talepleri için tasklar açıldı. Talep edilen değişiklikler sonrası canlıya çıkış hedeflenmektedir.",
+    "Progress": "98%",
+    "Statu": "In Progress",
+    "Group": "Digital Growth",
+    "Tag": "SelfOnboarding"
+  },
+  {
+    "Başlık ": "Menulux 8700 yerine e600'e geçişin efor analizi",
+    "Güncellemesi": "Süreç devam etmektedir.",
+    "Progress": "45%",
+    "Statu": "On Analysis",
+    "Group": "Payment",
+    "Tag": "Menulux"
+  },
+  {
+    "Başlık ": "Yeni ürün yapısının kurulması",
+    "Güncellemesi": "Tech ekibi, süreçlerin baştan sona ele alındığı bir toplantı gerçekleştirildi. 11.08 tarihinde, Yeni Ürün projesi kapsamında geliştirme yapan tüm ekip üyelerinin katılımıyla happy path senaryolarının stage ortamında testi gerçekleştirilecektir. Bu tarihe kadar geliştirme çalışmaları devam edecektir.",
+    "Progress": "20%",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "YeniÜrünYapısı"
+  },
+  {
+    "Başlık ": "Belbim / İstanbulKart ile 507 Engtegrasyonu",
+    "Güncellemesi": "Stage testleri için cihazlar Belbime verildi. Testleri devam etmektedir.",
+    "Progress": "95%",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "Belbim"
+  },
+  {
+    "Başlık ": "Denizbank API ile banka kurulumu",
+    "Güncellemesi": "Bankadan dönüş yapılmadı.",
+    "Progress": "80%",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "BankaKurulum"
+  },
+  {
+    "Başlık ": "Android Tekilleştirme Yayılım",
+    "Güncellemesi": "Manager Techpos ve Client uygulama testleri devam etmektedir.",
+    "Progress": "90%",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "Tekilleştirme"
+  },
+  {
+    "Başlık ": "Portal Embedded Kredi",
+    "Güncellemesi": "Kredi manager projesini stage ortamda ayağa kaldırıldı. \nDB mimari tasarımı tamamlandı. Pre-approved limit sorgulama endpointi üzerindeki çalışmalar devam ediyor.",
+    "Progress": "40%",
+    "Statu": "In Progress",
+    "Group": "Service Banking",
+    "Tag": "Embedded Kredi"
+  },
+  {
+    "Başlık ": "Yeni ürün yapısı ile birlikte portalde BFF yapısına geçilmesi",
+    "Güncellemesi": "Analiz tamamlandı, altyapı gitlab’e yüklendi. Stage deploy alındı ve Portal backend içerisindeki jwt servisleri bff içerisine taşındı. Service ve Terminal üzerinden beslenen endpointlerin yeni ürün yapısında sağlıklı çalışmaya devam edebilmesi için inceleme ve kontroller devam ediyor.",
+    "Progress": "20%",
+    "Statu": "In Progress",
+    "Group": "Service Banking",
+    "Tag": "YeniÜrünYapısı"
+  },
+  {
+    "Başlık ": "Kurumsal DNA",
+    "Güncellemesi": "Bütün firma personalleri üzerinde gerçekleştirilecek 13 adımlık llm session projedir. Her adım rol tanımları, etkileşimde olunan birimler, kişisel hedefler, süreç iyileştirme önerileri ve manuel yürütülen işler gibi bilgileri personelden almayı hedefler. Mevcut durumda proje için llm'ler ile iletişime geçip kullanıcıya stream eden bir frornt-end ve back-end geliştirildi. Kişilerin birbirini ve birimleri etiketleyebileceği bir kurgu yapıldı. Dosya yükleme ve dosyaların llm entegrasyonu devam etmektedir.",
+    "Progress": "95%",
+    "Statu": "In Progress",
+    "Group": "AI & DATA",
+    "Tag": "Kurumsal DNa"
+  },
+  {
+    "Başlık ": "Task Oluşturucu",
+    "Güncellemesi": "Projeler için açılan jira tasklarının tipine ve projesine göre şekillenen ve tasklar için standart task açıklamaları üreten bir chatbot projesidir. Tasklarda proje tarafından belirtilen ve mutlaka verilmesi gereken veya sağlanmasında fayda olacak bilgilerin taskı talep edene belirtilmesi, bütün task metinlerinin standartlaştırılması ve projeler özelinde taskların daha hedefli biçimde tariflenmesi amaçlanmaktadır. Product owner lar tarafından türlerine göre task şablonları oluşturulmuştur. Sistem promptları hazırlanmış ve bazı projeler ile test edilmiştir. Arayüz entegrasyonunun yapılması gerekmektedir.  ",
+    "Progress": "60%",
+    "Statu": "In Progress",
+    "Group": "AI & DATA",
+    "Tag": "TaskCreator"
+  },
+  {
+    "Başlık ": "TableauKnowledge Hub",
+    "Güncellemesi": "Tableau da hazırlanan raporlar hakkında bilgi alınabilecek, raporların içerikleri, konumları hakkında gibi bilgileri kullanıyıca aktaracak projedir. Kurum içinde oluşturulan knowledge graph'in ilk yan ürünüdür. Projede database den verilen prompt ile bilgi çekilmesi üzerinde çalışılıldı ve birden fazla algoritma geliştirildi. Tableau'nın database i ile knowledge graph arasındaki bilgi aktarım mekanızması kurulmaktadır. Arayüz entegrasyonun yapılması gerekmektedir.",
+    "Progress": "50%",
+    "Statu": "In Progress",
+    "Group": "AI & DATA",
+    "Tag": "KnowledgeGraph"
+  },
+  {
+    "Başlık ": "Call-Center Insights",
+    "Güncellemesi": "Call center a gelen çağrı metinlerini analiz ederek çağrılarının kök sepeplerinin belirlenmesi ve çağrıların sonuca bağlanıp bağlanmadığının analizin yapılması hedefleyen projedir. Proje poc aşamasındadır. Örnek çağrı metinleri üzerinden analizler gerçekleştirilmiş ve örnek analizler üzerinden sunum hazırlanmıştır. Çıktılar analiz edilmektedir.",
+    "Progress": "30%",
+    "Statu": "In Progress",
+    "Group": "AI & DATA",
+    "Tag": "Call-Center"
+  },
+  {
+    "Başlık ": "Code-Reviewer",
+    "Güncellemesi": "Teknoloji ekipleri tarafından geliştirlen code ların reviewlerinin yapılması ve pull-requeslt metinlerinin llm ile proje tarafından belirlenen tasklar özelinde hazırlanması hedeflenmektedir. Bu konu için kullanılabilecek araçlar analiz edilmiş ve https://github.com/qodo-ai/pr-agent kullanılmasına karar verilmiştir. POC olarak belirlenecek bir projenin pipeline ına bağlanacaktır.",
+    "Progress": "10%",
+    "Statu": "In Progress",
+    "Group": "AI & DATA",
+    "Tag": "AI&Code"
+  }
+]

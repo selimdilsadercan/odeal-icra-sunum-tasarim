@@ -1,0 +1,44 @@
+[
+  {
+    "Başlık": "Merkezi Loglama Altyapısı Değişiklikleri ve Alarm Tanımları",
+    "Güncellemesi": "Audit logları kapsamında;\nExternal Request Logları\nLogo Audit Logları\nMicrosoft Entra Audit Logları\nAloTech çağrı kayıt logları alınarak Merkez Bankası denetimi kapsamındaki tüm logların entegrasyonu tamamlanmış oldu.\nKamuSM tarafından zaman damgası testleri için test hesabı alındı ve testlere başlandı.",
+    "Progress": "85%",
+    "Statu": "In Progress"
+  },
+  {
+    "Başlık": "3rd Party Erişimlerin Düzenlenmesi",
+    "Güncellemesi": "Stajyer arkadaşımız eşliğinde projeye sıfırdan başlandı. Ara katman bir uygulama yazılarak Entra ile login sorunu çözülmeye çalışılıyor.",
+    "Progress": "",
+    "Statu": "In Progress"
+  },
+  {
+    "Başlık": "Taksidepos TCMB uyum",
+    "Güncellemesi": "Radore tarafında altyapı kurulumları devam ediyor. Bu kurulumlara bağlı olarak ilerleyecek olan regülasyon tarafındaki aksiyonlar beklemede.",
+    "Progress": "25%",
+    "Statu": "Test"
+  },
+  {
+    "Başlık": "Güvenlik açıklarının giderilmesi",
+    "Güncellemesi": "1 Ağustos: Total High: 1798 Total Critical: 435 Total Issues: 2233\n\n25 Temmuz: Total High: 1798 Total Critical: 435 Total Issues: 2233",
+    "Progress": "",
+    "Statu": ""
+  },
+  {
+    "Başlık": "Google -> Microsoft Geçişi & MS Güvenlik Çözümleri",
+    "Güncellemesi": "Drive ve Mailbox boyutları nedeniyle hata alan kullanıcılar ile servis hesapları dışında taşımalar tamamlandı.\nHata alan hesaplar için kontroller gerçekleştirilerek lisans artırımı ya da mailbox küçültme aksiyonları alındı.\nOTP aktivasyonu yapılması için duyuru çıkıldı.",
+    "Progress": "50%",
+    "Statu": "In Progress"
+  },
+  {
+    "Başlık": "Bağımsız IP Bloğu Altyapısı",
+    "Güncellemesi": "Bu hafta zaman ayrılamadı.",
+    "Progress": "10%",
+    "Statu": "In Progress"
+  },
+  {
+    "Başlık": "Merkezi Zafiyet Yönetim Sistemi",
+    "Güncellemesi": "Bu hafta zaman ayrılamadı.",
+    "Progress": "75%",
+    "Statu": "In Progress"
+  }
+]

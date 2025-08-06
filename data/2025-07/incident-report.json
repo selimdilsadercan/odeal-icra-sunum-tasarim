@@ -1,0 +1,52 @@
+[
+  {
+    "Takım": "Internal Ops",
+    "Süre (.dk)": 360,
+    "Başlangıç": "07/08/2025 8:00:00",
+    "Bitiş": "07/08/2025 14:00:00",
+    "Konu": "Kiva Arama Alanlarının Çalışmaması (Manticore Servis Sorunu)",
+    "Ay": "Temmuz",
+    "Rapor": "https://docs.google.com/document/d/1R0nAoXdKzmrt6HiE10deipmGbCjvDvX6PcjVcP2dFc8/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Payment",
+    "Süre (.dk)": 218,
+    "Başlangıç": "07/08/2025 13:04:00",
+    "Bitiş": "07/08/2025 16:42:00",
+    "Konu": "Kart Transfer Sorunu",
+    "Ay": "Temmuz",
+    "Rapor": "https://docs.google.com/document/d/1_Hs2HCNknYRFXT9mDn2LQ6SQcUEfsUG29Wa5m5fcOH8/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Digital Growth",
+    "Süre (.dk)": 150,
+    "Başlangıç": "07/25/2025 11:00:00",
+    "Bitiş": "07/25/2025 13:30:00",
+    "Konu": "3. 25.07.2025 – Satış Kapatma Hatası: cityId Alanının Beklenen Format (Int32) Dışında Olması Nedeniyle İşlem Tamamlanamadı",
+    "Ay": "Temmuz",
+    "Rapor": "https://docs.google.com/document/d/1gXhsEN8yvz6cG6ur1Qkj3xBR-77uj9-b2iymXkWZD9w/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  },
+  {
+    "Takım": "Digital Growth",
+    "Süre (.dk)": 75,
+    "Başlangıç": "07/26/2025 20:15:00",
+    "Bitiş": "07/26/2025 21:30:00",
+    "Konu": "KivaTouch Satış Dönüştürme Ekranında Adres Bilgisinin Otomatik Değişmesi",
+    "Ay": "Temmuz",
+    "Rapor": "https://docs.google.com/document/d/1sRPDDyu4D0V7w1ocynmi3QvHI0y19J21ltOJkK3mdIo/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  },
+  {
+    "Takım": "Digital Growth",
+    "Süre (.dk)": 75,
+    "Başlangıç": "07/26/2025 20:15:00",
+    "Bitiş": "07/26/2025 21:30:00",
+    "Konu": "KivaTouch Satış Dönüştürme Ekranında Taksit Seçeneğinin Seçilememesi",
+    "Ay": "Temmuz",
+    "Rapor": "https://docs.google.com/document/d/15MLUJ523AtaKPtzMjNXeUwzuZPVIj-V6FeXYiSJnNMc/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Thirdparty"
+  }
+]

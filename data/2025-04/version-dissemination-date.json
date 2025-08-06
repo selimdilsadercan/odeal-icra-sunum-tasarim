@@ -1,0 +1,32 @@
+[
+  {
+    "Takım": "DevOps",
+    "Süre (.dk)": 40,
+    "Başlangıç": "2/4/2025 17:30:00",
+    "Bitiş": "2/4/2025 18:10:00",
+    "Konu": "Admin Sayfası Erişim Sorunu",
+    "Ay": "April",
+    "Rapor": "https://docs.google.com/document/d/1gUmHrfDlksaKarylLSFCqiLyplpJrBjf5k4f3Gc3FVw/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "DevOps",
+    "Süre (.dk)": 154,
+    "Başlangıç": "11/4/2025 6:06:00",
+    "Bitiş": "11/4/2025 8:40:00",
+    "Konu": "Redis Update Kesintisi ",
+    "Ay": "April",
+    "Rapor": "https://docs.google.com/document/d/1VGA_KVHUoSNICyqPBxcLaSAvaMaCxLyi1i2pbxoIGEo/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "DevOps",
+    "Süre (.dk)": 59,
+    "Başlangıç": "4/28/2025 14:43:00",
+    "Bitiş": "4/28/2025 15:42:00",
+    "Konu": "OKC Servis Erişim Sorunu",
+    "Ay": "April",
+    "Rapor": "https://docs.google.com/document/d/1-_1cRlPXzR_RzCBCyawESL7L02CJWC-a--hm4t14Dgw/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  }
+]

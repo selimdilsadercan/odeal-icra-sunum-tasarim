@@ -1,0 +1,72 @@
+[
+  {
+    "Teknoloji İlgili Ekip": "TechOPS",
+    "Talep Sayısı ↓": 754,
+    "Tekrar Açılma": 1,
+    "Tekrar Açılma Oranı": "0,13%",
+    "Risk Seviyesi": "Düşük"
+  },
+  {
+    "Teknoloji İlgili Ekip": "CustomerOPS",
+    "Talep Sayısı ↓": 33,
+    "Tekrar Açılma": 3,
+    "Tekrar Açılma Oranı": "9,09%",
+    "Risk Seviyesi": "Orta"
+  },
+  {
+    "Teknoloji İlgili Ekip": "InternalOPS",
+    "Talep Sayısı ↓": 18,
+    "Tekrar Açılma": 1,
+    "Tekrar Açılma Oranı": "5,56%",
+    "Risk Seviyesi": "Orta"
+  },
+  {
+    "Teknoloji İlgili Ekip": "Subscription",
+    "Talep Sayısı ↓": 6,
+    "Tekrar Açılma": 0,
+    "Tekrar Açılma Oranı": "0%",
+    "Risk Seviyesi": "Düşük"
+  },
+  {
+    "Teknoloji İlgili Ekip": "Data",
+    "Talep Sayısı ↓": 8,
+    "Tekrar Açılma": 0,
+    "Tekrar Açılma Oranı": "0,00%",
+    "Risk Seviyesi": "Düşük"
+  },
+  {
+    "Teknoloji İlgili Ekip": "Invoice",
+    "Talep Sayısı ↓": 7,
+    "Tekrar Açılma": 0,
+    "Tekrar Açılma Oranı": "0,00%",
+    "Risk Seviyesi": "Düşük"
+  },
+  {
+    "Teknoloji İlgili Ekip": "DigitalGrowth",
+    "Talep Sayısı ↓": 4,
+    "Tekrar Açılma": 1,
+    "Tekrar Açılma Oranı": "25,00%",
+    "Risk Seviyesi": "Orta"
+  },
+  {
+    "Teknoloji İlgili Ekip": "Payment",
+    "Talep Sayısı ↓": 42,
+    "Tekrar Açılma": 3,
+    "Tekrar Açılma Oranı": "7,14%",
+    "Risk Seviyesi": "Orta"
+  },
+  {
+    "Teknoloji İlgili Ekip": "Finance",
+    "Talep Sayısı ↓": 1,
+    "Tekrar Açılma": 0,
+    "Tekrar Açılma Oranı": "0%",
+    "Risk Seviyesi": "Düşük"
+  },
+  {
+    "Teknoloji İlgili Ekip": "Service Banking",
+    "Talep Sayısı ↓": 0,
+    "Tekrar Açılma": 0,
+    "Tekrar Açılma Oranı": "0%",
+    "Risk Seviyesi": "Düşük"
+  }
+]

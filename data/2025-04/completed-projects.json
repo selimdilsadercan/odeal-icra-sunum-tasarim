@@ -1,0 +1,128 @@
+[
+  {
+    "Başlık ": "SanalPOS Karta geri ödeme",
+    "Güncellemesi": "SanalPOS'lardan kartlara geri ödeme yapılması sağlandı.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "SanalPOS, Ödeal Kart, Geri Ödeme"
+  },
+  {
+    "Başlık ": "Banka raporu erken uyarı sistemi",
+    "Güncellemesi": "Geri ödeme sürecinde Banka Raporu için erken uyarı sistemi devreye alınmıştı. Mordor sistemine entegre edilmiştir.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Erken Uyarı, Rapor"
+  },
+  {
+    "Başlık ": "Cihaz bazında profil tanımlama",
+    "Güncellemesi": "Bir firma üzerinde birden fazla profil kullanımı sağlandı.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "POS, Profil"
+  },
+  {
+    "Başlık ": "Ödealkart'ın cihaz ile beraber teslim edilmesi",
+    "Güncellemesi": "Müşteriye kuruluma gidildiğinde eğer müşteri yeni Ödeal Kart talebinde bulunduysa, cihazı kurarken kartı da beraberinde teslim etmesi sağlandı.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Ödeal Kart"
+  },
+  {
+    "Başlık ": "E-Fatura Portal Gelen Kutusu Kapatma Ekranı geliştirmesi",
+    "Güncellemesi": "Satışı kapanan firmaların fatura kesmesini önlemek için, admin paneline PK etiketini otomatik kapatan bir buton eklendi.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "E-Fatura, Portal"
+  },
+  {
+    "Başlık ": "Cohort analizinin anlık olarak tableau üzerinden sunulabilmesi",
+    "Güncellemesi": "Cohort analizine bankreport tablosu eklenerek banka komisyonu ve net kazanç bilgileri dahil edildi, böylece daha net bir ciro analizi yapılabiliyor.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Tableau, Cohort"
+  },
+  {
+    "Başlık ": "Fatura oluşturma süreçleri için Tableau raporları",
+    "Güncellemesi": "Fatura Dashboard Faz 3’te, kuyumculuk sektörü ve 9.900 TL üzeri işlemler için hatalara “Çözülmeyecek” statüsü eklendi, “IN PROGRESS” fatura oranı da rapora dahil edildi.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Tableau, Fatura"
+  },
+  {
+    "Başlık ": "Akbank fiziki POS banka kurulumlarının API üzerinden yapılması",
+    "Güncellemesi": "Akbank fiziki pos banka kurulumlarının api üzerinden yapılması sağlandı.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "POS, Banka Kurulum"
+  },
+  {
+    "Başlık ": "Karta Geri Ödeme Entegrasyonları",
+    "Güncellemesi": "Kuveyt ve TEB ile doğrudan entegrasyon. Testlerde hata alındı, bankaya bildirildi.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Ödeal Kart, TEB, Kuveyt"
+  },
+  {
+    "Başlık ": "Digital Onboarding (KYB)",
+    "Güncellemesi": "Geliştirmeler tamamlandı.İş birimi bu hafta bir UAT daha istedi. Organize edilecek",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "KYB"
+  },
+  {
+    "Başlık ": "Tami payback callback iyileştirme",
+    "Güncellemesi": "Geri Ödeme Statüleri daha hızlı güncellenmesi sağlandı.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "TAMİ, Performans"
+  },
+  {
+    "Başlık ": "Bilgi fişi",
+    "Güncellemesi": "Prod ortamında tekilleştirme versiyonunu kullanan tüm Android cihazlar bilgi fişi kullanımına geçti.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Bilgi Fişi, Fatura"
+  },
+  {
+    "Başlık ": "T300 uyumlu cihaz satışı",
+    "Güncellemesi": "Seç Market için Hugin T300 cihazlarının Telesatış ekranlarından uyumlu olarak satılabilmesi sağlandı.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Satış, Uyumlu, T300"
+  },
+  {
+    "Başlık ": "Uponte & Ödeal Talep Yönetimi Faz1",
+    "Güncellemesi": "Uponte talepleri artık Jira üzerinden yönetiliyor, yeni WhatsApp grubuyla birlikte efor ve raporlama takibi yapılabiliyor.",
+    "Progress": "100%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Tamamlandı",
+    "Keywords": "Fatura, Uponte, Talep Yönetimi"
+  }
+]

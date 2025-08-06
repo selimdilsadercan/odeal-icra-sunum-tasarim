@@ -1,0 +1,50 @@
+[
+  {
+    "Başlık": "Merkezi Loglama Altyapısı Değişiklikleri ve Alarm Tanımları",
+    "Güncellemesi": "Tüm firewall ve linux sunucu logları WAZUH ve Grafana Loki’ye entegre edildi.\nWindows server’lar için talepler açıldı.",
+    "Progress": "45%",
+    "Statu": "InProgress"
+  },
+  {
+    "Başlık": "3rd Party Erişimlerin Düzenlenmesi",
+    "Güncellemesi": "Open Source ürünlere alternatif olarak enterprise lisanslı Kron ve CyberArk firmaları ile toplantılar yapıldı ve ön teklifler istendi.",
+    "Progress": "60%",
+    "Statu": "InProgress"
+  },
+  {
+    "Başlık": "Google → Microsoft Geçişi ve MS Güvenlik Çözümleri",
+    "Güncellemesi": "Mayasoft ile geçiş hizmeti ve lisanslar konusunda anlaşmaya varıldı, teklif kabul edildi.",
+    "Progress": "20%",
+    "Statu": "InProgress"
+  },
+  {
+    "Başlık": "Takside POS TCMB Uyum",
+    "Güncellemesi": "Taksidepos 2.0 posAPI ve Backoffice için gereklen loglama geliştirmeleri Taksidepos ekiplerince yapıldı. Merkezi sistemle entegrasyonu için altyapı değişikliği bekleniyor.",
+    "Progress": "30%",
+    "Statu": "Test"
+  },
+  {
+    "Başlık": "Güvenlik Açıklarının Giderilmesi",
+    "Güncellemesi": "26 Haziran: Total High: 1900 Total Critical: 459 Total Issues: 2359\n13 Haziran: Total High: 2092 Total Critical: 500 Total Issues: 2592",
+    "Progress": "100%",
+    "Statu": "Done"
+  },
+  {
+    "Başlık": "Merkezi Zafiyet Yönetim Sistemi",
+    "Güncellemesi": "Kurulum yapıldı. Zafiyet tarama uygulamaları entegre ediliyor.",
+    "Progress": "40%",
+    "Statu": "InProgress"
+  },
+  {
+    "Başlık": "Bağımsız IP Bloğu Altyapısı",
+    "Güncellemesi": "RIPE üzerinden IP blok satın alımı gerçekleştirildi. Radore Datacenter’dan anons yapılmaya başlandı. Testler gerçekleştirilecek.",
+    "Progress": "90%",
+    "Statu": "InProgress"
+  },
+  {
+    "Başlık": "VUK 507 / GİB Sızma Testi",
+    "Güncellemesi": "20 Mayıs’ta başlayan testlerin,  28 Mayıs’ta ilk raporu çıktı. Raporda bulundan 6 düşük 1 orta seviyeli bulgu kapatıldı ve 30 Mayıs’ta doğrulama raporu alınarak çalışma 0 bulgu ile sonlandırıldı.",
+    "Progress": "100%",
+    "Statu": "Done"
+  }
+]

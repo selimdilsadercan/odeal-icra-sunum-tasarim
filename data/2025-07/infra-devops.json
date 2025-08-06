@@ -1,0 +1,38 @@
+[
+  {
+    "Başlık ": "Dengage Sunucu Yenileme/Taşıma",
+    "Güncellemesi": "Dengage tarafında App sunucuları için bir migrate yapılacak ancak tekrar ertelendi Dengage tarafından. Hafta başı hazırlık sürecini bitirip bir gece (7 Ağustos Perşembe büyük ihtimalle) geçiş yapmak planlanıyor.",
+    "İlerleme Durumu": "75%",
+    "Statü": "In Progress"
+  },
+  {
+    "Başlık ": "DevOPS VLAN taşıma",
+    "Güncellemesi": "192.168.0.0/24 networkünde yalnızca 21 vm kaldı, bunlardan bazılarını farklı sunucularda ayağa kaldırdık. 2 dns sunucusuna cihazlardan erişim verilmiş bunlara dokunulmayacak. Taşıyabileceğimiz veya migrate edebileceğimiz sunucularda işlemleri yaparak devam ediyoruz.",
+    "İlerleme Durumu": "50%",
+    "Statü": "In Progress"
+  },
+  {
+    "Başlık ": "Internal DMZ Sunucu ve Domain taşıma",
+    "Güncellemesi": "Yeni gelen bir çok internal veya produ etkilemeyen domain buraya kurulmaya devam ediyor. odeal.int domaini için analiz sonrası taşıma gerekiyor, buradaki scope çok geniş production tarafındaki bir çok servis etkileniyor.",
+    "İlerleme Durumu": "40%",
+    "Statü": "In Progress"
+  },
+  {
+    "Başlık ": "TaksidePOS Taşınması",
+    "Güncellemesi": "IP scopeları belirlendi. 152.114.207.50-59 ip aralığını taksidepos için ayırdık. uat-posv2.taksidepos.com 152.114.207.50 adresine ayarlanacak ve Ödeal sistemlerinde çalışmaya devam edecek.",
+    "İlerleme Durumu": "25%",
+    "Statü": "On Analysis"
+  },
+  {
+    "Başlık ": "SQL scriptlerinin kontrollü ve denetlenebilir çalıştırılması",
+    "Güncellemesi": "Uçtan uca test yapılacak.",
+    "İlerleme Durumu": "50%",
+    "Statü": "Test"
+  },
+  {
+    "Başlık ": "Docker Swarm - Kubernetes taşınması Faz1",
+    "Güncellemesi": "Ankara tarafındaki admin testleri tamamlandı. Testler tamamlandığı için buradaki önceliği düşürdük, database, redis, rabbitmq vb kurulumlar ile paralel olarak ilerleteceğiz.",
+    "İlerleme Durumu": "75%",
+    "Statü": "In Progress"
+  }
+]

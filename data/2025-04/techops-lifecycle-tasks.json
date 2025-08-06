@@ -1,0 +1,62 @@
+[
+  {
+    "Teknoloji İlgili Ekip": "DigitalGrowth",
+    "Lead Ort. ↓": 3.5,
+    "Cycle Ort.": 1.5,
+    "Reaction Ort.": 2
+  },
+  {
+    "Teknoloji İlgili Ekip": "InternalOPS",
+    "Lead Ort. ↓": 2.44,
+    "Cycle Ort.": 1.17,
+    "Reaction Ort.": 1.28
+  },
+  {
+    "Teknoloji İlgili Ekip": "CustomerOPS",
+    "Lead Ort. ↓": 4.09,
+    "Cycle Ort.": 2.7,
+    "Reaction Ort.": 1.39
+  },
+  {
+    "Teknoloji İlgili Ekip": "Invoice",
+    "Lead Ort. ↓": 6.14,
+    "Cycle Ort.": 1.57,
+    "Reaction Ort.": 4.57
+  },
+  {
+    "Teknoloji İlgili Ekip": "Finance",
+    "Lead Ort. ↓": 3,
+    "Cycle Ort.": 3,
+    "Reaction Ort.": 0
+  },
+  {
+    "Teknoloji İlgili Ekip": "ServiceBanking",
+    "Lead Ort. ↓": 0,
+    "Cycle Ort.": 0,
+    "Reaction Ort.": 0
+  },
+  {
+    "Teknoloji İlgili Ekip": "Payment",
+    "Lead Ort. ↓": 6.27,
+    "Cycle Ort.": 3.51,
+    "Reaction Ort.": 2.76
+  },
+  {
+    "Teknoloji İlgili Ekip": "Subscription",
+    "Lead Ort. ↓": 1.5,
+    "Cycle Ort.": 1.33,
+    "Reaction Ort.": 0.17
+  },
+  {
+    "Teknoloji İlgili Ekip": "Data",
+    "Lead Ort. ↓": 4.25,
+    "Cycle Ort.": 0,
+    "Reaction Ort.": 4.25
+  },
+  {
+    "Teknoloji İlgili Ekip": "TechOPS",
+    "Lead Ort. ↓": 0.67,
+    "Cycle Ort.": 0.55,
+    "Reaction Ort.": 0.12
+  }
+]

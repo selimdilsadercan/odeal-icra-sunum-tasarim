@@ -1,0 +1,38 @@
+[
+  {
+    "Başlık ": "Infra uygulamaları için merkezi log sistemi Faz1",
+    "Güncellemesi": "Tamamlandı"
+  },
+  {
+    "Başlık ": "Kubernetes taşınması Faz1",
+    "Güncellemesi": "Tamamlandı"
+  },
+  {
+    "Başlık ": "Redis KVDB güncelleme v3 -> v7",
+    "Güncellemesi": "Tamamlandı"
+  },
+  {
+    "Başlık ": "SQL scriptlerinin kontrollü ve denetlenebilir çalıştırılması",
+    "Güncellemesi": "Demo aşamasında, bu ay tamamlamayı hedefliyoruz."
+  },
+  {
+    "Başlık ": "TaksidePOS Taşınması",
+    "Güncellemesi": "Public ve internal network üzerinde bir analiz yapılıyor."
+  },
+  {
+    "Başlık ": "Internal DMZ",
+    "Güncellemesi": "Analiz bitti, taşıma başlandı."
+  },
+  {
+    "Başlık ": "DevOPS VLAN",
+    "Güncellemesi": "Analiz bitti, taşıma başlandı."
+  },
+  {
+    "Başlık ": "DEngage taşıma",
+    "Güncellemesi": "Database tarafındaki high availability için kurulum yapılıyor."
+  },
+  {
+    "Başlık ": "Kubernetes taşınması Faz2 (Stage)",
+    "Güncellemesi": "Stage ortamı yapılandırması devam ediyor."
+  }
+]

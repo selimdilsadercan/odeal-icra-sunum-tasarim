@@ -1,0 +1,824 @@
+[
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Customer OPS",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 2
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-447 [STARGATE] Payser Sipariş Servisinin query EP'sinin CargoStatüs Tablosuna Bağlanması ve Kivadan Üzerine Yenile Butonu Özelliği İçin API Yazılması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-464 Stargate - Tekil geri alım servisinde null check eklenmesi ve terminalId bilgisinin alınması"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Customer OPS",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 19
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-403 sprint 9 içerisinde plansız işler"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-401 Bko CeptePos Terminal Numarası Alanı Boş Olamaz Hatası İnceleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-405 BKM STAGE SERTİFİKA"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-406 Hugin N910 cihazı CustomerOPS alınması gereken aksiyonlar"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-407 Cerberus Servisinden Enqura Servislerine KYB Başvurusu Eklerken Meta Verilerin Eklenerek Gönderilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-408 Cerberus Servisinde KYB/Documents/Upload adımında Enqualify Servislerine de Dökümanların Gönderilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-409 Cerberus Servisinde Çıkan Hataların Düzeltilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-413 BKO Akbank entegrasyon testleri yapılacaktır"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-415 Member servisi redis bağımlılığı düzenlemeliyim ki redise bağlanılamadığında 500 dönmeyelim."
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-416 Uyumlu satışlarda yaşanan terminal aktiflenmesi hatası"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-417 MerchantDbContext ve Bko null hataları"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-411 Bekleme statüsüne alınan iş emirleri için servisten dönen açıklama alanın kivada gösterilmesi."
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-424 api/subscriptions servisine serviceId query'si eklenmeli"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-426 Güncellenen GMÖEBYS EKS Web Servis Kılavuzu"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-429 Cerberus Servisinde Müşteri Login Whitelist Tablosu ve Yapısının Oluşturulması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-404 Pasif Organizasyonların NVİ ve Blacklist sorgusuna girmesi sorunu"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-420 Paysere gönderilen ve Ödeal tarafında iş emirlerinin bağlandığı barkod yapısının revize edilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-422 Payser tarafına açılan iş emirlerde timeout sebepli açılamayan iş emirleri için Stargate üzerinde Payserden iş emirlerini içeri alan yapının kurulması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TCO-414 Digital Onboarding kapsamında mevcut üyelerin kyc sürecine girmemesi için ara bir tablo oluşturulması gereklidir"
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Digital Growth",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 1
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TDG-129 İş Ortakları - Bizim Toptan iş ortağımız için 180 adet cihazın başvuru, satış ve kurulum süreçlerinin manuel yapılmasının sağlanması"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Digital Growth",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 5
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TDG-88 Activepieces Üzerinde Zapier(Zap4-tableauReportV2Export) Üzerindeki Akışı NocoDB Tablosuna Yazılması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TDG-111 İş Ortağı - Bizim Toptan için uyumlu Hugin T300 cihazının satışı Telesatış ekranlarından uyumlu satışa açılması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TDG-112 Kiva Data API - API Collection Hazırlanması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TDG-113 Lead Autocall - Meta Kanalından Gelen Lead Bilgilerinin Alınıp Lead Autocall'a Dahil Edilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TDG-115 Restoran POS - D230 Cihaz Modelinin Satışa Açılması"
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Finance",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 0
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Finance",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 2
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TFIN-166 Portalden geri ödeme makbuzu almak istendiğinde, mail içeriği boş şekilde bir mail geliyor"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TFIN-198 Admin geri ödeme sayfasına Geri Ödeme Yöntemi filtresi eklenmelidir"
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "\nInternal Operation",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 5
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-252 Q2 2025 VIP Key List Tanımlamaları"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-187 KIVA CRM - ingenicoPosTalebiOlustur metodunda response içerisindeki orderNo dolu olmasına rağmen time değeri basılıyor olması incelenmeli, Stargate üzerinden gelen orderNo satış üzerinde gösterilmeli"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-236 Kiva CRM - AddGmuUser metoduna Vergi Dairesi adını parametre olarak iletelim"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-253 Kiva Görev No: 147127 - Yardım Talepleri Atanan/Atayan Kişi ve Çözüldü/Kontrol Ediliyor Statülerinin Detaylı Kontrolü"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-254 Sim Change OTP - DataPort Entegrasyon Teknik Değerlendirmesi"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "\nInternal Operation",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 2
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-231 Kiva CRM | Servis Talepleri - SIM Değişim İş Emrinde Açıklama Alanının Read-Only Olarak Gösterilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TIO-232 Mordor monitoring süreçlerine finance ekibi bank report handler monitoring entegrasyonu"
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Invoice",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 1
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-201 Invoice-Api SendHr Response Modelinin Güncellenmesi"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Invoice",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 15
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-151 Çok Satırlı Faturalarda 0 KDV li Satır Olduğunda 351 kodunun gönderilmemesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-147 9900 TL üzerinde alışverişlerde \"Nihai Tüketici\" yazılmasının önlenmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-164 Retail-Api | Error attempting to apply AttributeConverter"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-91 Servis İle Tamamlanmış Ödemenin İptali Sağlanması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-169 Fatura Bilgi Fişi QR Ekranı"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-179 TINV-110 Deploy & Test"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-180 Fatura Oluşturma DLQ initial delay ayarlanması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-181 1163 Hatası alan faturaların yeniden sorgulanması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-182 D2D Profilinde İstisna Açıklaması Zorunlu Tutulması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-183 A2A PROFİLİNDE 30 BİN TL VE ÜZERİ ÖDEMELER DE NAKİT ÖDEMENİN ENGELLENMESİ"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-184 İstanbulkart Ödeme Yöntemi Ödemelerinde Faturada Ödeme Tipinin İstanbulKart olarak belirtilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-186 EFATURA 1163 Hatası Alanların Tekrar Sorgulanması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-188 ODEAL harici entegratörlerde fatura gönderici bilgisi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-187 Mikro entegrasyonu için özel taxOfficeId kurallarının eklenmesi."
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TINV-192 Çok Satırlı Faturalarda 0 KDV li Satır Olduğunda 351 kodunun gönderilmemesi"
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Payment",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 20
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-283 vpos-payment/transaction-detail api oluşturulması ve iade bilgilerinin de dönülmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-284 finalize consumerlarında işletilen business varsa onun ödeme işleminden öncesine alınması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-285 pending statüsünde olan ödemelerin geriye dönük bir job ile sorgulanıp bizde statülerinin set edilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-286 149127 - Geri ödemesi atanmamış bir işleme fatura düzenlenmesi hk."
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-287 145697 - ceppos işlemi hakn"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-288 143501 - Aktif Görünmeyen Üyenin Çekimleri Hakkında"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-290 iptal edilmesi gereken işlemler"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-291 143210 - doğum tarihi günceleme - Mobil Uygulama Hataları"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-292 148507 - Talimatlı & Tekrarlı işlemler hk."
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-293 vpos hizmeti için organizationId ve externalId uniqueliği sağlanması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-294 new app BE den gelen cevapların fix edilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-295 147305 - Mobil Uygulama Hataları"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-296 akbank mono istek revizesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-281 Terminal Update Servisinde Kanal Bilgsinin Null Olarak Setlenmesinin Giderilmesi Gerekmektedir"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-297 transaction'ların state'lerinin tutulması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-301 141964 - Değişken kesilen komisyon oranları"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-302 150322 - Komisyonsuz aktarım. Hkk"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-303 151676 - Tc siz işlem limiti"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-304 144887 - Taksit sorunu"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-307 152207 - Hatalı kesilen komisyon oranı"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Payment",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 19
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-243 ceptepos | işbankası'na işlem isteklerinin submerchant bilgisi ile iletilmesi için MONO implementasyonu"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-238 Ceptepos - İŞ BANKASI İşlemlerinin MONO' a yönlendirilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-244 sanal pos - horizon prod deneme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-245 507'li nakit işlemlerde cacheKey fix"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-249 Kıva : 143522 - Karttan IBAN'a Transfer Hatası"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-251 dogum tarihi hatası alıyor - 301027264"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-253 Menulüx 1.2.09 stage testleri"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-255 kıva : 144682 - FizikiPos'tan Alınan İşlem/Tahsilat Görüntülenmeme Sorunu"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-256 KIVA : 146401 - Hatalı komisyon kesintisi hk"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-258 147320 - işlem alamama"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-259 kıva : Amount'un Yanlış Gelmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-260 Offline sürüm stage test"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-261 non-3d hatası"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-263 sanalpos service eklenmesi ve komisyon ve geri ödemelerin buna göre setlenmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-270 İşlem Mesajların Tüm ortamlarda Eşitlenmesi - mono"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-271 kıva : 2C20248758 mali no'lu cihazın onboarding süreci ve pasif olduğu halde işlem geçilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-275 147970 - Ceptepos İşlem Alamama"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-276 check status servisinde sistemde pending görünüyorsa monodan sorgulama yapılması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TPAY-278 Terrminal init yapılırken gelen versiyon bilgisini TerminalMerchantMappingHistory tablosuna yazılamıyor."
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Service Banking",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 12
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-229 Kart İptalleri"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-228 Telefon numarası tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-227 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-230 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-231 Telefon No Güncelleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-232 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-233 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-234 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-235 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-236 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-237 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-238 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Service Banking",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 7
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-198 IBAN'a dönüştürülmüş üyelerin kart başvurularının iptale çekilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-195 Kart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-196 Hata Alan Üye Kart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-197 Üyenin yenilenen kartı setlendikten sonra eski karta tekrar dönülmesi hatası"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-199 Kart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-200 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSB-217 Fibakart Tetikleme"
+  },
+  {
+    "Sprint": "Sprint 10",
+    "Sprint Tarihi": "21/Apr/25 10:35 AM - 05/May/25 1:44 PM",
+    "Takım": "Subscription",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 9
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-297 Cayma Bedeli Tanımı Yapılırken Cihaz ile Tanım Yapılabilme Özelliğinin Eklenmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-268 BE | Ücretsiz Abonelik Tamınında Başlangıç Tarihinin Ay Başı Seçilebilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-298 FE | Ücretsiz Abonelik Tamınında Başlangıç Tarihinin Ay Başı Seçilebilmesi"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-302 Paylim – Organizasyon Bazlı Ciro Hesaplama Kaydı Ekleme"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-306 Sanal POS için Yeni Servis ve Plan Tanımlaması (ServiceId: 9)"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-308 Ciro Paket Tanımı > Test Senaryoları ve Kabul Kriterleri"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-312 Payout-Source Servisinde Kart Tipi ve Durumu İçin Yeni /card/type Endpoint'inin Entegrasyonu"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-329 Yeni İş Ortağı – Elektrosoft Plan Oluşturma"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-174 Plan Kullanım Tipine Yeni Alan Eklenmesi"
+  },
+  {
+    "Sprint": "Sprint 9",
+    "Sprint Tarihi": "07/Apr/25 10:46 AM - 21/Apr/25 10:34 AM",
+    "Takım": "Subscription",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": 2
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-235 Kolay Randevu Planlarının Oluşturulması"
+  },
+  {
+    "Sprint": "",
+    "Sprint Tarihi": "",
+    "Takım": "",
+    "Sprint Dışı Maddeler/Sprint Dışı Eklenen Madde sayısı": "TSUB-234 Sözleşmeler Ekranı için Verilecek Yeni EP'ye Entegre Olunması"
+  }
+]

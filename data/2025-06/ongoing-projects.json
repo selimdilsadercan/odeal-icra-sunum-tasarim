@@ -1,0 +1,234 @@
+[
+  {
+    "Başlık ": "D2D & A2A profiline internal basket profili eklenmesi",
+    "Güncellemesi": "İlgili iş kalemi bir sonraki sprint’e dahil edilmiştir.\nMevcut sprint bugün sona ermektedir ve söz konusu çalışmanın önümüzdeki sprint içerisinde tamamlanması beklenmektedir.",
+    "Progress": "70%",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "D2D, A2A"
+  },
+  {
+    "Başlık ": "Digital Onboarding Faz1 İyileştirme süreci",
+    "Güncellemesi": "İyileştirmeler devam etmektedir. Son yapılan iki geliştirme;\n\nTCO-548: Erebor NVI servis üzerinde exp-date alanının null dönmesi (DONE)\n\nTCO-537: Erebor Servisinde Blacklist Member Sorgusunun Request Alanındaki \"Column\" annotation Yerine \"JsonProperty\" Kullanlıması (DONE)\n ",
+    "Progress": "%30",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "DigitalOnboarding"
+  },
+  {
+    "Başlık ": "Outline ile Şirket içi Wiki",
+    "Güncellemesi": "İlgili duyuru şirket geneline yapıldı, erişim yönetimi tamamlanıyor.",
+    "Progress": "90%",
+    "Statu": "In Progress",
+    "Group": "Tech Team",
+    "Tag": "Wiki"
+  },
+  {
+    "Başlık ": "Ödeal/Tesla - Komisyonlu Ödeme",
+    "Güncellemesi": "Proje Tamamlandı. Tesla ekibinden sözleşme bekleniyor. Ardından sahada aktif kullanımı başlatılacak. ",
+    "Progress": "%95",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "Tesla"
+  },
+  {
+    "Başlık ": "Ingenico cihazlarında Ödeal TR Karekod Açılması",
+    "Güncellemesi": "Ingenico ekibinden Prod release versiyonu bekleniyor. Versiyon iletildiğinde prod testleri yapılarak sahada pilot yapılmaya başlanacak",
+    "Progress": "%90",
+    "Statu": "Test",
+    "Group": "Payment",
+    "Tag": "Ingenico"
+  },
+  {
+    "Başlık ": "Embedded Kredi",
+    "Güncellemesi": "Mock tasarımda revizeler paylaşıldı.\n\nServislerin sandbox yetkileri alındı.\n\nSandbox testlerinden sonra geliştirme takvimine alınacak.",
+    "Progress": "20%",
+    "Statu": "On Analysis",
+    "Group": "Service Banking",
+    "Tag": "EmbeddedKredi"
+  },
+  {
+    "Başlık ": "Ödeal Kart - Kart İptal ve Yenileme Talebi Entegrasyonu",
+    "Güncellemesi": "Servislerin testleri başarıyla tamamlandı.\nPortal üzerinde iptal işlemi devre dışı bırakılacak ve yalnızca TROY kartlar için yenileme işlemi tetiklenecek şekilde revizyonlar tamamlanarak yayına alınacaktır.",
+    "Progress": "50%",
+    "Statu": "In Progress",
+    "Group": "Service Banking",
+    "Tag": "ÖdealKart"
+  },
+  {
+    "Başlık ": "Cihaz versiyonlarının İçeri Doğru Formatta Alınması",
+    "Güncellemesi": "PAX ile ofiste gerçekleştirilen toplantı sonucunda,\n5-6 Temmuz tarihlerinde sağlanacak Manager versiyonu ile test süreci başlatılacaktır.",
+    "Progress": "%85",
+    "Statu": "Blocked",
+    "Group": "Payment",
+    "Tag": ""
+  },
+  {
+    "Başlık ": "Jira İK Onboarding Süreci",
+    "Güncellemesi": "Demo gerçekleştirilmiş olup herhangi bir revize talebi alınmamıştır. Proje tamamlanarak kullanıma sunulmuştur. Eğitim planlaması yapılacaktır. Projenin ikinci fazı olan Jira İK Offboarding süreci için İnsan Kaynakları departmanından gerekli veriler beklenmektedir.",
+    "Progress": "70%",
+    "Statu": "In Progress",
+    "Group": "Project & Agile Transformation",
+    "Tag": "İKOnboarding"
+  },
+  {
+    "Başlık ": "Cari hesap, avans ve yemek kartı ödeme yöntemlerinin eklenmesi",
+    "Güncellemesi": "Tüm testler başarıyla tamamlandı ve herhangi bir sorun tespit edilmedi.\nSadece, cari ve avans işlemleri sonrasında POS üzerinden iptal işlemi gerçekleştirilmek istendiğinde “fatura bulunamadı” hatası alınmaktadır. Bu durum, ilgili işlemlerde fatura oluşmaması nedeniyle beklenen bir durumdur.\nİptal sürecinde fatura aranmasının engellenmesi için Payment ekibine görev oluşturulmuş olup, ilgili geliştirmeyi tamamlamaları beklenmektedir.\nBu adım tamamlandıktan sonra canlıya geçiş gerçekleştirilebilir.",
+    "Progress": "65%",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "Cari Avans"
+  },
+  {
+    "Başlık ": "Akbank fiziki pos banka kurulumlarının api üzerinden yapılması",
+    "Güncellemesi": "Geliştirmeler tamamlandı, cancel tarafı için InternalOPS çalışmaya başladı. ",
+    "Progress": "80%",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "FizikiPOS"
+  },
+  {
+    "Başlık ": "Menulux 8700 yerine e600'e geçişin efor analizi",
+    "Güncellemesi": "Momentup tarafında cihaz analizleri tamamlanmıştır.\nCuma günü, son analiz çıktılarının kontrolü gerçekleştirilecektir.\nAnaliz sürecinin ardından oluşturulan task’ların geliştirme çalışmalarına başlanacaktır.",
+    "Progress": "%45",
+    "Statu": "On Analysis",
+    "Group": "Payment",
+    "Tag": "Menulux"
+  },
+  {
+    "Başlık ": "Yeni ürün yapısının kurulması",
+    "Güncellemesi": "Ürünün altyapısının oluşturulmasına yönelik çalışmalar devam etmektedir.",
+    "Progress": "5%",
+    "Statu": "In Progress",
+    "Group": "Customer Ops",
+    "Tag": "YeniÜrünYapısı"
+  },
+  {
+    "Başlık ": "",
+    "Güncellemesi": "",
+    "Progress": "",
+    "Statu": "",
+    "Group": "",
+    "Tag": ""
+  },
+  {
+    "Başlık ": "ECZ(Eczanem) Fatura Entegrasyonu",
+    "Güncellemesi": "SendHR – GetHR testleri başarıyla tamamlandı.\nSon olarak GMO iptal testi gerçekleştirilmektedir.\nİlgili çalışmaların, önümüzdeki sprintin ilk haftasında tamamlanması planlanmaktadır.",
+    "Progress": "%70",
+    "Statu": "In Progress",
+    "Group": "Invoice",
+    "Tag": "ECZ"
+  },
+  {
+    "Başlık ": "507'li işlem imzalama",
+    "Güncellemesi": "Geçmiş 24m civarı işlem imzalandı ve tamamlandı.\nYeni gelen 507’li işlemlerin imzalanması konusu henüz tamamlanmadı.",
+    "Progress": "%50",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "HSM"
+  },
+  {
+    "Başlık ": "CeptePOS İşlemlerinin Mutabakatı",
+    "Güncellemesi": "Halkbank için eşleşme kontrolü geliştirmesi deploy aşamasında olup, önümüzdeki hafta devreye alınması planlanmaktadır.\nBuna ek olarak, Denizbank ve Vakıfbank SanalPOS işlemleri için benzer düzenlemeler yapılacaktır. İlgili task’lar bir sonraki sprint kapsamında planlanmıştır.",
+    "Progress": "%75",
+    "Statu": "In Progress",
+    "Group": "Finance",
+    "Tag": "CeptePOS"
+  },
+  {
+    "Başlık ": "Teknoloji verimliliği: Agile & Dora metrics",
+    "Güncellemesi": "Customer OPS için otomasyonlar yazılmaya başlandı.",
+    "Progress": "%80",
+    "Statu": "In Progress",
+    "Group": "Tech Team",
+    "Tag": "Verimlilik"
+  },
+  {
+    "Başlık ": "Belbim / İstanbulKart ile 507 Engtegrasyonu",
+    "Güncellemesi": "E-Fatura ödemelerinde, fatura iptal işlemi hatalı yapılıyordu düzeltildi.E-Fatura iptal ediliyordu edilmemesi gerekiyordu ( GIB Regulasyon gereği)\nNormal süreçte invoice cancellation eligibility servisine yönlendirilmesi gereken işlem, bu kontrol yapılmaksızın doğrudan iptal edilmekteydi düzeltildi.\n\nAyrıca, Belbim tarafına otomatik gün sonu saatiyle ilgili bir soru yöneltilmiş olup, yanıt beklenmektedir.( Backend ile Belbim günsonu saatinin uyuşması beklenmektedir)",
+    "Progress": "%90",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "Belbim"
+  },
+  {
+    "Başlık ": "Bizim Toptan Kasa POS entegrasyonu",
+    "Güncellemesi": "Customer ve BasketID ile ilgili testler, PAX ile yapılan çalışmalar doğrultusunda devam etmektedir.\nKasaPOS entegrasyonunda iade sürecine geçilmiş olup, süreç Momentup ekibi ve Payment ekibi tarafından paralel şekilde yürütülmektedir.",
+    "Progress": "%95",
+    "Statu": "Test",
+    "Group": "Payment",
+    "Tag": "KasaPOS"
+  },
+  {
+    "Başlık ": "SanalPOS Alt Üye İşyeri Geliştirmeleri",
+    "Güncellemesi": "TFKB tarafında taksitli işlem iznini prodda tamamlandı.\nBin yönlendirme Denizbanktan - TFKB olacak şekilde bu hafta içerisinde kontrollu olarak sağlanacaktır.",
+    "Progress": "%95",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "SanalPOS"
+  },
+  {
+    "Başlık ": "Yeni CeptePos'un Yayına Alınması",
+    "Güncellemesi": "Hesap Makinası hatası, Subscription ekibinden iletilen endpoint ile test edilmiştir.\nStage ortamında gerçekleştirilen testlerde herhangi bir sorun gözlemlenmemiştir.\nPROD ortamı için App Store yayım süreci yarın başlatılacaktır. ",
+    "Progress": "%90",
+    "Statu": "UAT",
+    "Group": "Payment",
+    "Tag": "CeptePOS"
+  },
+  {
+    "Başlık ": "Finans Platformu",
+    "Güncellemesi": "Finans platformunun onay ve akıbet sayfasındaki geliştirmeler belirli bir aşamaya ulaşmıştır.\nÖnümüzdeki sprintte Payven entegrasyonuna yönelik geliştirme çalışmalarına başlanacaktır.\nAyrıca, SHFT tarafında dummy verilerle front-end çalışmaları gerçekleştirilmiş olup, tarafımızca bazı minör revizyon talepleri iletilmiştir.",
+    "Progress": "%30",
+    "Statu": "In Progress",
+    "Group": "Finance",
+    "Tag": "FinansPlatformu"
+  },
+  {
+    "Başlık ": "RRN ile işlemlerin eşleşmesi",
+    "Güncellemesi": "RRN veya banka referans numarası ile işlem eşleştirme geliştirmelerine yönelik olarak, Payment ekibi tarafındaki task’ın tamamlanması beklenmektedir.\nİlgili geliştirme süreci tamamlandığında tarafımızdaki işlemler devam ettirilecektir.",
+    "Progress": "%30",
+    "Statu": "In Progress",
+    "Group": "Finance",
+    "Tag": "RRN"
+  },
+  {
+    "Başlık ": "Android Tekilleştirme Yayılım",
+    "Güncellemesi": "5-6 Temmuz tarihlerinde sağlanacak Manager versiyonu ve Momentup tarafından iletilmesi beklenen son Client versiyonu ile testlerimizi tamamlamayı planlıyoruz.\nArdından, PROD ortamında pilot uygulama ile yayılım sürecine geçmeyi hedefliyoruz.",
+    "Progress": "%80",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "Tekilleştirme"
+  },
+  {
+    "Başlık ": "Para Transferi Banka Entegrasyonları",
+    "Güncellemesi": "Payven entegrasyon geliştirmelerine önümüzdeki sprint başlanması hedeflenmektedir.",
+    "Progress": "%40",
+    "Statu": "On Analysis",
+    "Group": "Finance",
+    "Tag": "ParaTransferi"
+  },
+  {
+    "Başlık ": "Ciro bazlı komisyon tanımı",
+    "Güncellemesi": "Payment ekibi olarak gerekli geliştirmeler yapılıp canlı ortama geçişler başarılı şekilde yapılmıştır. Subs. ekibi geliştirmeleri tamamlayıp bu hafta içerisinde canlıya alacaktır.",
+    "Progress": "99%",
+    "Statu": "In Progress",
+    "Group": "Subscription",
+    "Tag": "Ciro"
+  },
+  {
+    "Başlık ": "WorldLine A910SF OKC Projesi",
+    "Güncellemesi": "Kart yönlendirme testlerimiz Worldline'nin vermiş olduğu versiyondan sonra ilk testlerde doğru çalıştığı gözlemlendi ama routing testlerimiz devam etmektedir.\n\nA910SF cihazı üzerinden QR işlemleri için WL geliştirme yapması beklenmektedir.\n\nCihazdan yapılan işlemlere ait sliplerin bizim sisteme yansıması test ediliyor. (Admin Panelde göremiyoruz)\n\nOtomatik gün sonu tetiklemesi: Wordline'nin tüm parkur 26 saat koşulu ile çalıştığından otomatik günsonu saati aynı gün içerisinde yapıldığında tetiklenmemektedir. Son durum Worldline alınarak hareket edilecektir.\n",
+    "Progress": "90%",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "WorldLine, Ingenico"
+  },
+  {
+    "Başlık ": "KasaPOS İADE Süreci",
+    "Güncellemesi": "Kasapos iade süreci hem Momentup hemde Backend tarafında geliştirmeler devam etmekte. Business ekibin yakından takip ettiği konu olarak tarafımıza iletildiğinden önceliklendirilmiş olup 7-8 temmuz haftası PAX'tan gelecek versiyon ile testlerin başarılı olması durumunda Bizim Toptan'a verilecektir.",
+    "Progress": "%45",
+    "Statu": "In Progress",
+    "Group": "Payment",
+    "Tag": "Momentup, Payment"
+  }
+]

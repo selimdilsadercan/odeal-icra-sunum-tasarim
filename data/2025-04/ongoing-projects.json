@@ -1,0 +1,183 @@
+[
+  {
+    "Başlık ": "RRN ile işlemlerin eşleşmesi",
+    "Güncellemesi": "RRN ile birlikte banka referans numarası yönelik geliştirmeyi bu sprint için planladık.",
+    "Progress": "70%",
+    "Not": "%25 girilmiş",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": "Finance"
+  },
+  {
+    "Başlık ": "Finans Platformu",    "Güncellemesi": "Payment ekibi, finish servisimizde RRN ile birlikte banka referans numarası için de bir alan açılmasına yönelik geliştirmeyi önümüzdeki sprintte gerçekleştirecektir. Bu geliştirme sonrasında, cihaz tedarikçilerinden her iki veriyi de iletmeleri talep edilecektir.",
+
+    "Güncellemesi": "Finans platformuna yönelik Transfer API gibi yeni servislerin geliştirme çalışmalarına başlandı",
+    "Progress": "30%",
+    "Not": "%25 girilmiş",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": "Service Banking"
+  },
+  {
+    "Başlık ": "Card Manager",
+    "Güncellemesi": "Kart ve banka entegrasyonlarının alt yapısının yeniden tasarlanması ve bu entegrasyonların tek bir yerden yönetilmesi için yapılan mimari çalışmadır.\n\nUAT testleri tamamlandı. 20 mayıs haftasında proda geçirileecek.",
+    "Progress": "99%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": "Service Banking"
+  },
+  {
+    "Başlık ": "Ödeal kartlara 7/24 para transferi",
+    "Güncellemesi": "Finans platformuyla birlikte devam ediyor. Süreç Payven firması ile ilerletilecek. ",
+    "Progress": "60%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": "Finance"
+  },
+  {
+    "Başlık ": "CeptePOS İşlemlerinin Mutabakatı",
+    "Güncellemesi": "Bu hafta başlayacak sprint ile birlikte CeptePOS işlem mutabakat geliştirmesine başlayacağız.",
+    "Progress": "75%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Para Transferi Banka Entegrasyonları",
+    "Güncellemesi": "Kart transfer servisini test edebilmek adına TEB tarafından örnek bir request paylaşılmış olup, servis ile ilgili analiz çalışmaları devam ediyor.",
+    "Progress": "25%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Belbim / İstanbulKart",
+    "Güncellemesi": "Ödeme entegrasyonu. Belbim tarafında gecikme ve düşük öncelik nedeniyle ertelenebilir.",
+    "Progress": "10%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": "Payment"
+  },
+  {
+    "Başlık ": "Kasa POS entegrasyonu",
+    "Güncellemesi": "Pax ve Momentup geliştiriyor. Canlı test ve pilot kurulumu planlandı.",
+    "Progress": "90%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": "Payment"
+  },
+  {
+    "Başlık ": "Android Tekilleştirme Yayılım",
+    "Güncellemesi": "Yeni tekilleştirme versiyonu 1.2.13 toplam 4477 cihaza gönderildi, güncelleme alan cihaz sayısı 3844",
+    "Progress": "70%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": "Payment"
+  },
+  {
+    "Başlık ": "507'li işlem imzalama",
+    "Güncellemesi": "Mevcut işlemler tamamlanmak üzere, akabinde canlı imzalama geçeceğiz.",
+    "Progress": "90%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": "Invoice"
+  },
+  {
+    "Başlık ": "Ciro bazlı komisyon tanımı",
+    "Güncellemesi": "Kampanya bazlı otomatik komisyon planı atanması, backend ve frontend geliştirme başladı.",
+    "Progress": "30%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": ""
+  },
+  {
+    "Başlık ": "ECZ Fatura",
+    "Güncellemesi": "Developer testleri yapıldı UAT yapılacak.",
+    "Progress": "85%",
+    "Not": "%70 girilmiş güncelleme",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "EDM Özel Entegratör Entegrasyonu",
+    "Güncellemesi": "Faturahub üzerinden gerçekleşecek EDM–Faturahub HR servis entegrasyonu bu sprint planlandı.",
+    "Progress": "10%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Açık hesap ödeme yöntemi",
+    "Güncellemesi": "Analiz sürecinin tamamlanmasının ardından geliştirme çalışmaları Ödeal BE ekibi tarafından başlatılmıştır; Momentup tarafında ise geliştirme aşamasına henüz geçilmemiştir.",
+    "Progress": "10%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Test ve kurulum",
+    "Güncellemesi": "Toplam 21 adet demo cihaz hazırlandı, bunların 19'u entegre müşterilerimiz veya birlikte çalıştığımız firmalar gibi şirket dışı kullanımlar için, 2'si ise şirket içi ekip arkadaşlarımız tarafından kullanılmak üzere tahsis edilmiştir.",
+    "Progress": "",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Jira İK Onboarding Süreci",
+    "Güncellemesi": "Giriş ve çıkış işlemleri için Jira üzerinde formlar ve otomasyon kuralları tanımlandı. Süreç; görev atamaları, checklist takibi ve bildirimlerle dijital olarak yürütülmeye başlandı.",
+    "Progress": "40%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Teknoloji verimliliği: Agile & Dora metrics",
+    "Güncellemesi": "Subscription ekibiyle pilot tamamlandı. 3 Sprintlik veri oluştu. Raporlar hazırlanıyor, pilot 1 ekiple daha yaygınlaştırma sürecinde",
+    "Progress": "40%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "",
+    "Statu": "",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Yeni ürün yapısı",
+    "Güncellemesi": "Bu hafta başlayacak sprint ile birlikte, ilgili ekipler sprint'e görev alarak teknik analiz veya yazılım geliştirme sürecine başlayacak.",
+    "Progress": "10%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Self Onboarding",
+    "Güncellemesi": "İlk adımın ekranı ve bağlı ekranlar oluşturuldu. İlk adımın akışları tamamlandı.\nİkinci adımlar üzerinde ekran ve akış geliştirilmesi çalışmaları devam ediyor.",
+    "Progress": "20%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  },
+  {
+    "Başlık ": "Yapay zeka ile müşteri kayıp tahminlemesi (Churn prediction)",
+    "Güncellemesi": "Müşteri davranışları ve geçmiş işlem verilerinin analizine dayalı olarak, müşteri kaybını (churn) önceden tahmin etmeye yönelik makine öğrenmesi modelleri geliştirilmektedir. Proje kapsamında, riskli müşterilerin erken tespitiyle iş birimlerine proaktif aksiyon önerileri sunularak müşteri sadakatinin artırılması ve olası gelir kayıplarının önüne geçilmesi hedeflenmektedir. Yapay zeka kısmı tamamlandı, ürünleştirme çalışmasına geçildi",
+    "Progress": "90%",
+    "Not": "",
+    "Hottopic maddenin güncel durumu": "Güncelleme alındı",
+    "Statu": "Devam ediyor",
+    "Group": ""
+  }
+]

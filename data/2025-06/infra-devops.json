@@ -1,0 +1,50 @@
+[
+  {
+    "Başlık ": "Infra uygulamaları için merkezi log sistemi - Faz 1",
+    "Güncellemesi": "Infra uygulamalarının merkezi loglaması tamamlandı.",
+    "İlerleme Durumu": "100%",
+    "Statü": "Done"
+  },
+  {
+    "Başlık ": "Kubernetes geçişi - Faz 1",
+    "Güncellemesi": "Ödeal servisleri Stage ortamında tamamen Kubernetes ile çalışıyor.",
+    "İlerleme Durumu": "100%",
+    "Statü": "Done"
+  },
+  {
+    "Başlık ": "Redis KVDB güncellemesi (v3 → v7)",
+    "Güncellemesi": "Redis kullanan tüm servisler için v7 geçişi tamamlandı.",
+    "İlerleme Durumu": "100%",
+    "Statü": "Done"
+  },
+  {
+    "Başlık ": "SQL script’lerinin kontrollü ve denetlenebilir şekilde çalıştırılması",
+    "Güncellemesi": "Demo aşamasında. Bu ay içerisinde tamamlanması hedeflenmektedir.",
+    "İlerleme Durumu": "50%",
+    "Statü": "Test"
+  },
+  {
+    "Başlık ": "Takside POS taşınması",
+    "Güncellemesi": "TaksidePOS ekibiyle birlikte analiz çalışması gerçekleştirildi.\nTopoloji çizimi yapılacak olup; VLAN ve sunucu listeleri, topoloji ile birlikte oluşturulacaktır. Bu bilgiler onaya sunulup onay alındıktan sonra test ortamı ile birlikte taşıma sürecine başlanacaktır.",
+    "İlerleme Durumu": "10%",
+    "Statü": "In Progress"
+  },
+  {
+    "Başlık ": "Internal DMZ Sunucu ve Domain taşıma",
+    "Güncellemesi": "Production ortamını etkileyen servislerin taşıması henüz gerçekleştirilmedi.\nBu kısım için hem firewall üzerinde hem de uygulama seviyesinde detaylı analiz yapılması gerekmektedir. Ancak, bu konu şu an için öncelikli gündemimizde yer almamaktadır.",
+    "İlerleme Durumu": "30%",
+    "Statü": "In Progress"
+  },
+  {
+    "Başlık ": "DevOPS VLAN",
+    "Güncellemesi": "Production ortamını etkileyen servislerin taşıması henüz gerçekleştirilmedi.\nBu alanla ilgili olarak hem firewall konfigürasyonu hem de uygulama tarafında detaylı analiz yapılması gerekmektedir. Ancak, bu konu mevcut durumda öncelikli gündemimizde yer almamaktadır.",
+    "İlerleme Durumu": "40%",
+    "Statü": "In Progress"
+  },
+  {
+    "Başlık ": "D·Engage taşıma",
+    "Güncellemesi": "Dengage tarafındaki işlemlere önümüzdeki hafta başlanacaktır.\nDBA ekiplerinin izinde olması nedeniyle süreç, onların dönüşüyle birlikte ilerleyecektir.",
+    "İlerleme Durumu": "60%",
+    "Statü": "In Progress"
+  }
+]

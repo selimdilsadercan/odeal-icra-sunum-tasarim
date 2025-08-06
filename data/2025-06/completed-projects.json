@@ -1,0 +1,42 @@
+[
+  {
+    "Başlık ": "Card Manager",
+    "Label": "CardManager"
+  },
+  {
+    "Başlık ": "BTrans hatalı işlemlerin düzenlenmesi ve yeniden gönderimi",
+    "Label": "BTrans"
+  },
+  {
+    "Başlık ": "BİN tanımı - Debit kartların İş Bankası’na yönlendirilmesi - Sanal POS",
+    "Label": "SanalPOS"
+  },
+  {
+    "Başlık ": "E-Fatura POS cihazlarda fatura slibi yerine bilgi fişi slibi verilmesi",
+    "Label": "E-FaturaPOS"
+  },
+  {
+    "Başlık ": "Gruplanarak yapılan geri ödemeler için 500K limit eklenmesi",
+    "Label": "GeriÖdeme"
+  },
+  {
+    "Başlık ": "Sanal POS iade süreci",
+    "Label": "SanalPOS"
+  },
+  {
+    "Başlık ": "Self Onboarding",
+    "Label": "SelfOnboarding"
+  },
+  {
+    "Başlık ": "Mordor Teknoloji status page çalışması",
+    "Label": "Mordor"
+  },
+  {
+    "Başlık ": "Açık hesap ödeme yöntemi",
+    "Label": "AçıkHesap"
+  },
+  {
+    "Başlık ": "Denizbank API ile banka kurulumu",
+    "Label": "BankaKurulum"
+  }
+]

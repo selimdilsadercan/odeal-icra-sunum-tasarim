@@ -1,0 +1,92 @@
+[
+  {
+    "Takım": "Finance",
+    "Süre (.dk)": 17,
+    "Başlangıç": "05/05/2025 14:05:00",
+    "Bitiş": "05/05/2025 14:22:00",
+    "Konu": "Deploy Kaynaklı Rest Kesintisi",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1J4UBHCI5Cv484ol_u6_f5phi9cGRFBZAZFPtuWctS2Y/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  },
+  {
+    "Takım": "Service Banking",
+    "Süre (.dk)": 191,
+    "Başlangıç": "05/07/2025 9:15:00",
+    "Bitiş": "05/07/2025 12:26:00",
+    "Konu": "Ödeal Portal Kesintisi (Fibabanka)",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1T95i9t49WrrRKQllzWQ3qmSuwt0xKRTt4s756lS58xQ/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Finance",
+    "Süre (.dk)": 112,
+    "Başlangıç": "05/09/2025 7:39:00",
+    "Bitiş": "05/09/2025 9:31:00",
+    "Konu": "Ödeal Admin Geri Ödeme Sayfası Kesintisi",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1RxHWZXWoz7MiWno39e1XJnAdLDCWLVt_Hm4bCuGYp9M/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  },
+  {
+    "Takım": "Customer Ops",
+    "Süre (.dk)": 80,
+    "Başlangıç": "05/13/2025 16:30:00",
+    "Bitiş": "05/13/2025 17:50:00",
+    "Konu": "Deploy Kaynaklı Findeks Servis Kesintisi",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1dV3xtYLXTY598lMl1QZwXfvYDqiKnQy57RjR1uE15yk/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  },
+  {
+    "Takım": "Finance",
+    "Süre (.dk)": 33,
+    "Başlangıç": "05/20/2025 12:00:00",
+    "Bitiş": "05/20/2025 12:33:00",
+    "Konu": "Ödeal Portal Erişimi Payout Source 500 Hatası",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1qd45_26qMDjVtJ3X2q7vj4P6tl_hrT-6UZAH-dZmCz4/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Invoice",
+    "Süre (.dk)": 90,
+    "Başlangıç": "05/27/2025 16:00:00",
+    "Bitiş": "05/27/2025 17:30:00",
+    "Konu": "Kiva Satış Ekranında Invoice URL Oluşmaması",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1D-R0V7s4ZDPBs59AiMiOLB9F_SHWQ69nKF4Wrgi_Nr4/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Service Banking",
+    "Süre (.dk)": 240,
+    "Başlangıç": "05/28/2025 14:00:00",
+    "Bitiş": "05/28/2025 18:00:00",
+    "Konu": "Admin Üye Detay Sayfasında Kart Bilgileri Alanının Açılmaması",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/15uqgmx-EssXdEJ9W4lSBIGgmOCSwNCJQi8Bew8vBFbk/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Service Banking",
+    "Süre (.dk)": 1170,
+    "Başlangıç": "05/28/2025 14:00:00",
+    "Bitiş": "05/29/2025 9:30:00",
+    "Konu": "Ödeal Portal Kart Transfer Sorunu",
+    "Ay": "Mayıs",
+    "Rapor": "https://docs.google.com/document/d/1ruK4XdJt8m41ZnTt9advhy4x4p7d4c8TAK4fEIDsUp8/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Bug"
+  },
+  {
+    "Takım": "Customer Ops",
+    "Süre (.dk)": 13,
+    "Başlangıç": "06/26/2025 15:57:00",
+    "Bitiş": "06/26/2025 16:10:00",
+    "Konu": "PAX Cihazlarda Sepete Ürün Ekleme Sorunu",
+    "Ay": "Haziran",
+    "Rapor": "https://docs.google.com/document/d/1FX9opptnZlOlqVUSRHtLb2G0deS-I7i-isKmVALpn1M/edit?tab=t.0",
+    "Kök Sebep Kategorisi": "Deploy"
+  }
+]
