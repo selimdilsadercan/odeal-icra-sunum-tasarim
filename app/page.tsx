@@ -257,6 +257,29 @@ export default function Home() {
     return teamColors[normalizedTeam] || 'bg-gray-100 text-gray-800 border-gray-200';
   };
 
+  const getLifecycleMetricColor = (value: number, metricType: 'lead' | 'cycle' | 'reaction') => {
+    // Different thresholds for different metric types
+    const thresholds = {
+      lead: { excellent: 10, good: 50, warning: 200, critical: 400 },
+      cycle: { excellent: 10, good: 50, warning: 150, critical: 300 },
+      reaction: { excellent: 5, good: 25, warning: 50, critical: 100 }
+    };
+    
+    const threshold = thresholds[metricType];
+    
+    if (value <= threshold.excellent) {
+      return 'text-green-600 font-semibold';
+    } else if (value <= threshold.good) {
+      return 'text-blue-600 font-medium';
+    } else if (value <= threshold.warning) {
+      return 'text-yellow-600 font-medium';
+    } else if (value <= threshold.critical) {
+      return 'text-orange-600 font-semibold';
+    } else {
+      return 'text-red-600 font-bold';
+    }
+  };
+
   // Process out-of-sprint data to group by team and sprint
   const processOutOfSprintData = () => {
     const teamData: { [key: string]: { [key: string]: number } } = {};
@@ -1316,14 +1339,20 @@ export default function Home() {
                               <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                 {task["Teknoloji İlgili Ekip"]}
                               </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                {task["Lead Ort. ↓"].toFixed(2)}
+                              <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                <span className={getLifecycleMetricColor(task["Lead Ort. ↓"], 'lead')}>
+                                  {task["Lead Ort. ↓"].toFixed(2)}
+                                </span>
                               </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                {task["Cycle Ort."].toFixed(2)}
+                              <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                <span className={getLifecycleMetricColor(task["Cycle Ort."], 'cycle')}>
+                                  {task["Cycle Ort."].toFixed(2)}
+                                </span>
                               </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                {task["Reaction Ort."].toFixed(2)}
+                              <td className="px-6 py-4 whitespace-nowrap text-sm">
+                                <span className={getLifecycleMetricColor(task["Reaction Ort."], 'reaction')}>
+                                  {task["Reaction Ort."].toFixed(2)}
+                                </span>
                               </td>
                             </tr>
                           ))
@@ -1339,6 +1368,86 @@ export default function Home() {
                         )}
                       </tbody>
                     </table>
+                  </div>
+                </div>
+                
+                {/* Description Section */}
+                <div className="px-12 py-5 border-t border-gray-200 bg-gray-50">
+                  <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      {/* Sürelerin Anlamları */}
+                      <div>
+                        <h4 className="text-base font-semibold text-gray-900 mb-4 flex items-center">
+                          <div className="w-1 h-4 bg-blue-500 rounded mr-3"></div>
+                          Sürelerin Anlamları
+                        </h4>
+                        <div className="space-y-3 text-sm text-gray-700">
+                          <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                              <span className="font-semibold text-blue-700">Lead Time:</span>
+                              <p className="text-gray-600 mt-1">Bir görevin açılmasından çözülmesine kadar geçen toplam süre. Müşteri deneyimini doğrudan etkiler.</p>
+                            </div>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                              <span className="font-semibold text-green-700">Reaction Time:</span>
+                              <p className="text-gray-600 mt-1">Görevin açılmasından ekibin işlemeye başlamasına kadar geçen süre. İlk yanıt hızını gösterir.</p>
+                            </div>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                              <span className="font-semibold text-purple-700">Cycle Time:</span>
+                              <p className="text-gray-600 mt-1">Ekibin görevi işlemeye başlamasından çözülmesine kadar geçen süre. Ekip verimliliğini yansıtır.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Formül ve Renk Kodları */}
+                      <div>
+                        <h4 className="text-base font-semibold text-gray-900 mb-4 flex items-center">
+                          <div className="w-1 h-4 bg-indigo-500 rounded mr-3"></div>
+                          Formül ve Renk Kodları
+                        </h4>
+                        <div className="space-y-4 text-sm text-gray-700">
+                          <div>
+                            <div className="font-medium text-gray-800 mb-2">Formül:</div>
+                            <div className="space-y-1 text-gray-600">
+                              <div>• Lead Time = Reaction Time + Cycle Time</div>
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-medium text-gray-800 mb-2">Zaman Süresi Renk Kodları:</div>
+                            <div className="space-y-2">
+                              <div className="flex items-center justify-between py-1">
+                                <div className="flex items-center space-x-3">
+                                  <div className="w-4 h-4 bg-teal-500 rounded"></div>
+                                  <span>Düşük</span>
+                                </div>
+                                <span className="text-gray-600 font-mono">&lt; 1.5 gün</span>
+                              </div>
+                              <div className="flex items-center justify-between py-1">
+                                <div className="flex items-center space-x-3">
+                                  <div className="w-4 h-4 bg-yellow-500 rounded"></div>
+                                  <span>Orta</span>
+                                </div>
+                                <span className="text-gray-600 font-mono">1.5 - 3.0 gün</span>
+                              </div>
+                              <div className="flex items-center justify-between py-1">
+                                <div className="flex items-center space-x-3">
+                                  <div className="w-4 h-4 bg-red-500 rounded"></div>
+                                  <span>Yüksek</span>
+                                </div>
+                                <span className="text-gray-600 font-mono">&gt; 3.0 gün</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
